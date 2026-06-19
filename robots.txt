@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://inti94.github.io/car-baekgwa/sitemap.xml
