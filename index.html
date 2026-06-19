@@ -166,7 +166,7 @@
             <div class="widget-box">
                 <div class="widget-title">⚙️ 카백과 <span>스마트 금융 툴</span></div>
                 <div class="widget-desc">금융 계산기 및 세금 모의 계산기 영역입니다.</div>
-                <button class="calc-link-btn" onclick="alert('준비 중인 모듈입니다.');">월 장기렌트료 모의 계산기</button>
+                <button class="calc-link-btn" id="calc-trigger-btn">월 장기렌트료 모의 계산기</button>
             </div>
         </aside>
 
@@ -313,6 +313,97 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
     });
 });
-</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 1. 계산기 입력 폼을 담을 컨테이너를 사이드바 버튼 아래에 동적으로 생성하거나 활성화
+    const calcBtnTrigger = document.querySelector('.sidebar button, #calc-trigger-btn') || Array.from(document.querySelectorAll('button')).find(el => el.textContent.includes('모의 계산기'));
+    
+    // 만약 사이트 내에 입력창이 아직 없다면 버튼 바로 아래에 멋진 다크모드 입력창을 만들어 넣습니다.
+    if (calcBtnTrigger) {
+        // 버튼을 클릭하면 아래쪽에 숨겨져 있던 진짜 계산기 입력창이 펼쳐집니다.
+        calcBtnTrigger.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // 이미 입력창이 만들어져 있는지 확인
+            let container = document.getElementById('dynamic-calc-container');
+            if (!container) {
+                container = document.createElement('div');
+                container.id = 'dynamic-calc-container';
+                container.style.cssText = "background:#1e293b; padding:20px; border-radius:12px; margin-top:15px; border:1px solid #334155; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.3);";
+                
+                container.innerHTML = `
+                    <h4 style="margin:0 0 15px 0; color:#38bdf8; font-size:16px; font-weight:bold;">🧮 카백과 스마트 계산기</h4>
+                    <div style="margin-bottom:12px;">
+                        <label style="display:block; font-size:12px; color:#94a3b8; margin-bottom:5px;">차량 가격 (만원 단위)</label>
+                        <input type="number" id="car-price" value="4500" style="width:100%; padding:8px; background:#0f172a; border:1px solid #475569; border-radius:6px; color:#fff; box-sizing:border-box;">
+                    </div>
+                    <div style="margin-bottom:12px;">
+                        <label style="display:block; font-size:12px; color:#94a3b8; margin-bottom:5px;">선수금/보증금 (%)</label>
+                        <input type="number" id="deposit" value="20" placeholder="0~50" style="width:100%; padding:8px; background:#0f172a; border:1px solid #475569; border-radius:6px; color:#fff; box-sizing:border-box;">
+                    </div>
+                    <div style="margin-bottom:15px;">
+                        <label style="display:block; font-size:12px; color:#94a3b8; margin-bottom:5px;">이용 기간</label>
+                        <select id="period" style="width:100%; padding:8px; background:#0f172a; border:1px solid #475569; border-radius:6px; color:#fff; box-sizing:border-box;">
+                            <option value="36">36개월</option>
+                            <option value="48">48개월</option>
+                            <option value="60" selected>60개월</option>
+                        </select>
+                    </div>
+                    <button id="real-calc-btn" style="width:100%; padding:10px; background:#38bdf8; border:none; border-radius:6px; color:#0f172a; font-weight:bold; cursor:pointer; transition:all 0.2s;">실시간 견적 산출하기</button>
+                    <div id="calc-result" style="display:none; margin-top:15px;"></div>
+                `;
+                
+                calcBtnTrigger.parentNode.insertBefore(container, calcBtnTrigger.nextSibling);
+                
+                // 새로 만든 [실시간 견적 산출하기] 버튼에 계산 로직 연결
+                document.getElementById('real-calc-btn').addEventListener('click', calculateLogics);
+            } else {
+                // 이미 열려있으면 토글(닫기/열기)
+                container.style.display = container.style.display === 'none' ? 'block' : 'none';
+            }
+        });
+    }
+
+    // 2. 실제 자동차 금융 계산 수식 엔진
+    function calculateLogics() {
+        const carPriceInput = document.getElementById('car-price');
+        const depositInput = document.getElementById('deposit');
+        const periodSelect = document.getElementById('period');
+        const resultBox = document.getElementById('calc-result');
+
+        const carPrice = parseFloat(carPriceInput.value) * 10000; 
+        const depositPercent = parseFloat(depositInput.value) || 0;
+        const months = parseInt(periodSelect.value) || 60;
+
+        if (!carPrice || carPrice <= 0) {
+            alert('차량 가격을 정확히 입력해주세요.');
+            carPriceInput.focus();
+            return;
+        }
+
+        const acquisitionTax = carPrice * 0.07;
+        const depositAmount = carPrice * (depositPercent / 100);
+        const principal = (carPrice + acquisitionTax) - depositAmount;
+        
+        // 연이율 5.5% 적용
+        const annualRate = 0.055;
+        const monthlyRate = annualRate / 12;
+        const power = Math.pow(1 + monthlyRate, months);
+        let monthlyPayment = (principal * monthlyRate * power) / (power - 1);
+
+        resultBox.style.display = 'block';
+        resultBox.innerHTML = `
+            <div style="background: #0f172a; padding: 12px; border-radius: 8px; margin-top: 12px; border-left: 4px solid #f43f5e;">
+                <h5 style="margin:0 0 8px 0; color:#f43f5e; font-size:14px;">📊 분석 결과 (추정치)</h5>
+                <p style="margin:4px 0; font-size:13px; color:#94a3b8;">• 취등록세(7%): <span style="color:#fff;">${Math.round(acquisitionTax / 10000).toLocaleString()}만원</span></p>
+                <p style="margin:4px 0; font-size:13px; color:#94a3b8;">• 초기 보증금: <span style="color:#fff;">${Math.round(depositAmount / 10000).toLocaleString()}만원</span></p>
+                <div style="border-top:1px solid #334155; margin:8px 0;"></div>
+                <p style="margin:4px 0; font-size:14px; font-weight:bold; color:#fff;">
+                    💡 예상 월 납입료: <span style="color:#38bdf8;">약 ${Math.round(monthlyPayment / 10000).toLocaleString()}만원</span>
+                </p>
+            </div>
+        `;
+    }
+});
 </body>
 </html>
