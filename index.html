@@ -1,34 +1,166 @@
-// 카백과(CAR BAEKGWA) 글로벌 공통 레이아웃 엔진
-document.addEventListener("DOMContentLoaded", function() {
-    // 1. 헤더 영역 동적 주입 (브랜드명 & 슬로건 & 검색 UI)
-    const headerHTML = `
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카백과 | 자동차의 모든 정보, 한곳에서.</title>
+    
+    <!-- SEO 최적화 메타 태그 -->
+    <meta name="description" content="렌트·리스·신차·중고차·보험·정비·비교·금융까지 아우르는 국내 대표 자동차 정보 플랫폼, 카백과입니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="카백과 | 자동차의 모든 정보, 한곳에서.">
+    <meta property="og:description" content="자동차 금융부터 소모품 관리까지 자동차의 모든 정보를 한곳에서 완벽하게 확인하세요.">
+    <meta property="og:site_name" content="카백과">
+
+    <style>
+        /* 프리미엄 다크모드 디자인 시스템 */
+        :root {
+            --bg-main: #0b0f19;         
+            --bg-card: #161c2a;         
+            --bg-header: #020617;       
+            --bg-nav: #0f172a;          
+            --text-main: #ffffff;       
+            --text-sub: #94a3b8;        
+            --point-color: #38bdf8;     
+            --ads-border: #334155;      
+            --ads-bg: #1e293b;          
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, sans-serif; }
+        body { background-color: var(--bg-main); color: var(--text-main); line-height: 1.6; }
+        a { color: inherit; text-decoration: none; transition: 0.2s; }
+
+        /* 상단 브랜딩 헤더 */
+        header { background-color: var(--bg-header); border-bottom: 1px solid #1e293b; padding: 1.5rem 1rem; position: sticky; top: 0; z-index: 100; }
+        .header-container { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; align-items: center; }
+        @media (min-width: 768px) { .header-container { flex-direction: row; justify-content: space-between; } }
+        
+        .brand-zone { text-align: center; }
+        @media (min-width: 768px) { .brand-zone { text-align: left; } }
+        .logo { font-size: 1.8rem; font-weight: 900; color: #fff; letter-spacing: -1px; }
+        .logo span { color: var(--point-color); }
+        .slogan { font-size: 0.85rem; color: var(--text-sub); font-weight: 500; margin-top: 0.2rem; }
+        
+        /* 검색 바 */
+        .search-container { width: 100%; max-width: 400px; }
+        .search-input { width: 100%; padding: 0.75rem 1.2rem; background: #0f172a; border: 1px solid #334155; border-radius: 50px; color: #fff; font-size: 0.9rem; }
+
+        /* 대분류 GNB 내비게이션 */
+        nav { background-color: var(--bg-nav); border-bottom: 1px solid #1e293b; overflow-x: auto; white-space: nowrap; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; padding: 0.2rem 1rem; }
+        .nav-item { padding: 1rem 1.2rem; font-weight: 700; color: var(--text-sub); font-size: 0.95rem; position: relative; }
+        .nav-item:hover, .nav-item.active { color: var(--point-color); }
+        .nav-item.active::after { content: ''; position: absolute; bottom: 0; left: 1.2rem; right: 1.2rem; height: 3px; background-color: var(--point-color); }
+
+        /* 메인 레이아웃 (2단 그리드) */
+        .main-wrapper { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr; gap: 2rem; }
+        @media (min-width: 992px) { .main-wrapper { grid-template-columns: 2.6fr 1.4fr; } }
+
+        /* 구글 애드센스 광고 슬롯 */
+        .ads-container { background-color: var(--bg-card); border: 1px dashed var(--ads-border); padding: 1.5rem; text-align: center; border-radius: 12px; color: #475569; font-size: 0.85rem; margin-bottom: 2rem; }
+        .ads-banner-mock { min-height: 100px; display: flex; align-items: center; justify-content: center; background: var(--ads-bg); border-radius: 6px; font-weight: 600; color: #64748b; }
+
+        /* 콘텐츠 카드 영역 */
+        .section-header { font-size: 1.3rem; font-weight: 800; margin-bottom: 1.2rem; padding-left: 0.8rem; border-left: 4px solid var(--point-color); }
+        .card-grid { display: grid; grid-template-columns: 1fr; gap: 1.2rem; margin-bottom: 3rem; }
+        @media (min-width: 640px) { .card-grid { grid-template-columns: 1fr 1fr; } }
+        
+        .contents-card { background-color: var(--bg-card); border: 1px solid #1e293b; border-radius: 14px; padding: 1.5rem; transition: 0.3s; cursor: pointer; }
+        .contents-card:hover { transform: translateY(-5px); border-color: var(--point-color); }
+        
+        .card-meta { display: flex; gap: 0.5rem; margin-bottom: 0.8rem; }
+        .tag-subcat { font-size: 0.75rem; color: var(--point-color); font-weight: 700; background: rgba(56, 189, 248, 0.1); padding: 0.25rem 0.6rem; border-radius: 6px; }
+        
+        .card-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.6rem; color: var(--text-main); line-height: 1.4; }
+        .card-preview { font-size: 0.9rem; color: var(--text-sub); }
+
+        /* 우측 사이드바 */
+        .sidebar-zone { display: flex; flex-direction: column; gap: 1.8rem; }
+        .widget-box { background: #161c2a; border: 1px solid #243147; border-radius: 14px; padding: 1.5rem; }
+        .widget-title { font-size: 1.1rem; font-weight: 800; margin-bottom: 1rem; }
+        .widget-title span { color: var(--point-color); }
+        .widget-desc { font-size: 0.85rem; color: var(--text-sub); margin-bottom: 1.2rem; }
+        
+        .calc-link-btn { display: block; width: 100%; padding: 0.9rem; background: #0284c7; text-align: center; border-radius: 8px; font-weight: 700; font-size: 0.9rem; margin-bottom: 0.6rem; color: #fff; border: none; cursor: pointer; }
+        
+        /* 하단 푸터 (수정 요청하신 자동차 종합 정보 안내 문구 반영) */
+        footer { background-color: var(--bg-header); border-top: 1px solid #1e293b; padding: 3rem 1rem; text-align: center; color: var(--text-sub); font-size: 0.85rem; margin-top: 5rem; }
+        .footer-logo { font-size: 1.4rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem; }
+        .footer-info { max-width: 600px; margin: 1rem auto 0; color: #475569; font-size: 0.8rem; line-height: 1.5; }
+    </style>
+</head>
+<body>
+
+    <!-- 상단 헤더 -->
+    <header>
         <div class="header-container">
             <div class="brand-zone">
-                <div class="logo"><a href="/car-baekgwa/">CAR<span>BAEKGWA</span></a></div>
+                <div class="logo">CAR<span>BAEKGWA</span></div>
                 <div class="slogan">자동차의 모든 정보, 한곳에서.</div>
             </div>
             <div class="search-container">
                 <input type="text" class="search-input" placeholder="렌트, 리스, 신차 비교, 정비 팁 검색...">
             </div>
         </div>
-    `;
-    const headerEl = document.querySelector("header");
-    if (headerEl) headerEl.innerHTML = headerHTML;
+    </header>
 
-    // 2. GNB 내비게이션 영역 동적 주입 (3단계 계층 구조의 1단계 대분류)
-    const navHTML = `
+    <!-- 내비게이션 메뉴 -->
+    <nav>
         <div class="nav-container">
-            <a href="/car-baekgwa/" class="nav-item" id="nav-home">종합 홈</a>
-            <a href="/car-baekgwa/purchase/rent-lease/장기렌트-리스-결정적-차이.html" class="nav-item" id="nav-purchase">자동차 구매 & 금융</a>
-            <a href="#" class="nav-item" id="nav-compare">차량 비교 & 가이드</a>
-            <a href="#" class="nav-item" id="nav-management">유지관리 & 상식</a>
+            <a href="#" class="nav-item active">종합 홈</a>
+            <a href="./purchase/rent-lease/장기렌트-리스-결정적-차이.html" class="nav-item">자동차 구매 & 금융</a>
+            <a href="#" class="nav-item">차량 비교 & 가이드</a>
+            <a href="#" class="nav-item">유지관리 & 상식</a>
         </div>
-    `;
-    const navEl = document.querySelector("nav");
-    if (navEl) navEl.innerHTML = navHTML;
+    </nav>
 
-    // 3. 하단 푸터 영역 동적 주입 (요청하신 자동차 종합 정보 안내 문구로 전면 수정)
-    const footerHTML = `
+    <!-- 메인 레이아웃 -->
+    <div class="main-wrapper">
+        
+        <!-- 왼쪽 콘텐츠 그리드 -->
+        <main>
+            <div class="ads-container">
+                <div class="ads-banner-mock">구글 애드센스 상단 반응형 광고 (추천: 728x90)</div>
+            </div>
+
+            <div class="section-header">
+                <div>💰 자동차 구매 & 금융 노하우</div>
+            </div>
+            <div class="card-grid">
+                <div class="contents-card" onclick="location.href='./purchase/rent-lease/장기렌트-리스-결정적-차이.html'">
+                    <div>
+                        <div class="card-meta"><span class="tag-subcat">렌트/리스</span></div>
+                        <div class="card-title">장기렌트와 자동차 리스의 결정적 차이점 TOP 5</div>
+                        <div class="card-preview">세제 혜택부터 번호판 종류, 보험 경력 유지 여부까지 나에게 딱 맞는 최적의 자동차 금융 상품을 명쾌하게 비교해 드립니다.</div>
+                    </div>
+                </div>
+                <div class="contents-card" onclick="alert('콘텐츠 준비 중입니다.');">
+                    <div>
+                        <div class="card-meta"><span class="tag-subcat">자동차 금융</span></div>
+                        <div class="card-title">금융사 및 캐피탈사마다 장기렌트 견적이 다른 비밀</div>
+                        <div class="card-preview">왜 똑같은 차종과 옵션인데 월 납입료가 수만 원씩 차이 날까요? 조달 금리와 잔존 가치 산정 방식의 숨겨진 구조를 파헤칩니다.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ads-container">
+                <div class="ads-banner-mock">구글 애드센스 본문 중간 삽입형 광고</div>
+            </div>
+        </main>
+
+        <!-- 오른쪽 사이드바 -->
+        <aside class="sidebar-zone">
+            <div class="widget-box">
+                <div class="widget-title">⚙️ 카백과 <span>스마트 금융 툴</span></div>
+                <div class="widget-desc">금융 계산기 및 세금 모의 계산기 영역입니다.</div>
+                <button class="calc-link-btn" onclick="alert('준비 중인 모듈입니다.');">월 장기렌트료 모의 계산기</button>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- 하단 푸터 (요청하신 자동차 종합 정보 문구 전면 적용 완료) -->
+    <footer>
         <div class="footer-logo">카백과</div>
         <div>자동차의 모든 정보, 한곳에서.</div>
         <div class="footer-info">
@@ -36,14 +168,7 @@ document.addEventListener("DOMContentLoaded", function() {
             본 플랫폼은 신차, 중고차, 장기렌트 및 리스, 차량 유지관리와 금융 정보까지<br>
             운전자에게 필요한 국내외 유용한 자동차 종합 정보를 쉽고 정확하게 알려주는 전문 정보 사이트입니다.
         </div>
-    `;
-    const footerEl = document.querySelector("footer");
-    if (footerEl) footerEl.innerHTML = footerHTML;
-    
-    // 현재 페이지 위치에 따라 메뉴 활성화(Active) 표시 자동 부여
-    const path = window.location.pathname;
-    if (path.includes("/purchase/")) document.getElementById("nav-purchase")?.classList.add("active");
-    else if (path.includes("/compare/")) document.getElementById("nav-compare")?.classList.add("active");
-    else if (path.includes("/management/")) document.getElementById("nav-management")?.classList.add("active");
-    else document.getElementById("nav-home")?.classList.add("active");
-});
+    </footer>
+
+</body>
+</html>
