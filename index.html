@@ -252,6 +252,67 @@
             }
         });
     </script>
+<!-- 🧮 자동차 금융 계산기 실전 구동 스크립트 -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 입력 요소 및 버튼 가져오기
+    const carPriceInput = document.getElementById('car-price');
+    const depositInput = document.getElementById('deposit');
+    const periodSelect = document.getElementById('period');
+    const calcBtn = document.getElementById('calc-btn');
+    const resultBox = document.getElementById('calc-result');
 
+    if (!calcBtn) return; // 계산기 요소가 없으면 실행 중지
+
+    calcBtn.addEventListener('click', function() {
+        // 1. 입력값 가져오기 및 예외 처리
+        const carPrice = parseFloat(carPriceInput.value) * 10000; // 만원 단위 반영
+        const depositPercent = parseFloat(depositInput.value) || 0;
+        const months = parseInt(periodSelect.value) || 36;
+
+        if (!carPrice || carPrice <= 0) {
+            alert('차량 가격을 정확히 입력해주세요.');
+            carPriceInput.focus();
+            return;
+        }
+
+        // 2. 자동차 금융 시뮬레이션 기본 로직 산출
+        // 취등록세 계산 (일반 승용차 기준 7%)
+        const acquisitionTax = carPrice * 0.07;
+        
+        // 초기 선수금/보증금 액수
+        const depositAmount = carPrice * (depositPercent / 100);
+        
+        // 대출/이용 원금 (차량가격 + 취등록세 - 선수금)
+        const principal = (carPrice + acquisitionTax) - depositAmount;
+        
+        // 추정 연 이자율 (렌트/리스/할부 평균 시중 금리 약 5.5% 반영)
+        const annualRate = 0.055;
+        const monthlyRate = annualRate / 12;
+        
+        // 원리금 균등상환 공식 적용하여 월 납입료 산출
+        // 공식: [원금 * 이율 * (1+이율)^기간] / [(1+이율)^기간 - 1]
+        const power = Math.pow(1 + monthlyRate, months);
+        let monthlyPayment = (principal * monthlyRate * power) / (power - 1);
+
+        // 3. 화면에 보기 좋게 결과 출력하기
+        resultBox.style.display = 'block';
+        resultBox.innerHTML = `
+            <div style="background: #161c2a; padding: 15px; border-radius: 8px; margin-top: 15px; border-left: 4px solid #38bdf8;">
+                <h4 style="margin-top:0; color:#38bdf8; font-size:16px;">📊 예상 견적 시뮬레이션 결과</h4>
+                <p style="margin: 5px 0; font-size:14px;">• 취등록세(7%): <b style="color:#fff;">${Math.round(acquisitionTax / 10000).toLocaleString()} 만원</b></p>
+                <p style="margin: 5px 0; font-size:14px;">• 초기 보증금/선수금: <b style="color:#fff;">${Math.round(depositAmount / 10000).toLocaleString()} 만원</b></p>
+                <hr style="border:0; border-top:1px solid #2e374a; margin:10px 0;">
+                <p style="margin: 5px 0; font-size:16px; font-weight:bold;">
+                    💡 예상 월 납입료: <span style="color:#f43f5e; font-size:18px;">약 ${Math.round(monthlyPayment / 10000).toLocaleString()} 만원</span>
+                </p>
+                <small style="color:#94a3b8; display:block; margin-top:10px; font-size:11px;">
+                    * 위 결과는 단순 시뮬레이션이며, 실제 렌트사/금융사 및 차종별 프로모션에 따라 다를 수 있습니다.
+                </small>
+            </div>
+        `;
+    });
+});
+</script>
 </body>
 </html>
