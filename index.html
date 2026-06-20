@@ -1,409 +1,986 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta name="naver-site-verification" content="b01fc12285b9487227639f055d9d283bdfe0413b" />
-<meta name="google-site-verification" content="LlwsPjtthivTT8kApq3AzEwMvPpnbKPf_tsxTSMjZtk" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>카백과 | 자동차의 모든 정보, 한곳에서.</title>
-    
-    <!-- SEO 최적화 메타 태그 -->
-    <meta name="description" content="렌트·리스·신차·중고차·보험·정비·비교·금융까지 아우르는 국내 대표 자동차 정보 플랫폼, 카백과입니다.">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="카백과 | 자동차의 모든 정보, 한곳에서.">
-    <meta property="og:description" content="자동차 금융부터 소모품 관리까지 자동차의 모든 정보를 한곳에서 완벽하게 확인하세요.">
-    <meta property="og:site_name" content="카백과">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="자동차 무료 계산기와 실전 정보를 한곳에서 — 취등록세, 자동차세, 장기렌트·리스 비교, 연비, 보험료, 감가상각, 전기차 충전비 등 12가지 계산기와 커뮤니티 인기 가이드.">
+<meta name="keywords" content="자동차 계산기, 취등록세 계산기, 자동차세 계산기, 장기렌트 계산기, 연비 계산기, 전기차 충전비 계산기, 자동차 보험료, 감가상각 계산기, 차 살 때 세금, 자동차 정보">
+<meta name="robots" content="index, follow">
+<meta name="author" content="카백과">
+<meta name="google-site-verification" content="LlwsPjtthivTT8kApq3AzEwMvPpnbKPf_tsxTSMjZtk">
+<meta name="naver-site-verification" content="b01fc12285b9487227639f055d9d283bdfe0413b">
+<meta property="og:type" content="website">
+<meta property="og:title" content="카백과 — 자동차 무료 계산기 + 실전 정보">
+<meta property="og:description" content="취등록세·자동차세·장기렌트·연비·전기차 충전비 등 12가지 무료 계산기와 커뮤니티 검증 자동차 가이드를 한곳에서.">
+<meta property="og:url" content="https://inti94.github.io/car-baekgwa/">
+<meta property="og:image" content="https://inti94.github.io/car-baekgwa/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="카백과">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="카백과 — 자동차 무료 계산기 + 실전 정보">
+<meta name="twitter:description" content="취등록세·장기렌트·연비·전기차 충전비 등 12가지 무료 계산기">
+<meta name="twitter:image" content="https://inti94.github.io/car-baekgwa/og-image.png">
+<link rel="canonical" href="https://inti94.github.io/car-baekgwa/">
+<title>카백과 — 자동차 무료 계산기 12가지 + 실전 정보</title>
 
-    <style>
-        /* 프리미엄 다크모드 디자인 시스템 */
-        :root {
-            --bg-main: #0b0f19;         
-            --bg-card: #161c2a;         
-            --bg-header: #020617;       
-            --bg-nav: #0f172a;          
-            --text-main: #ffffff;       
-            --text-sub: #94a3b8;        
-            --point-color: #38bdf8;     
-            --ads-border: #334155;      
-            --ads-bg: #1e293b;          
-        }
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4059494172804910" crossorigin="anonymous"></script>
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, sans-serif; }
-        body { background-color: var(--bg-main); color: var(--text-main); line-height: 1.6; }
-        a { color: inherit; text-decoration: none; transition: 0.2s; }
+<!-- JSON-LD Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://inti94.github.io/car-baekgwa/#website",
+      "url": "https://inti94.github.io/car-baekgwa/",
+      "name": "카백과",
+      "description": "자동차 무료 계산기와 실전 정보를 한곳에서",
+      "inLanguage": "ko-KR",
+      "publisher": {"@id": "https://inti94.github.io/car-baekgwa/#organization"},
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {"@type": "EntryPoint", "urlTemplate": "https://inti94.github.io/car-baekgwa/category.html?q={search_term_string}"},
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://inti94.github.io/car-baekgwa/#organization",
+      "name": "카백과",
+      "url": "https://inti94.github.io/car-baekgwa/",
+      "description": "자동차의 모든 정보를 한곳에서 — 계산기, 구매가이드, 유지관리, 금융"
+    },
+    {
+      "@type": "CollectionPage",
+      "url": "https://inti94.github.io/car-baekgwa/",
+      "name": "카백과 자동차 무료 계산기 모음",
+      "description": "취등록세·자동차세·장기렌트·연비·전기차 충전비 등 12가지 자동차 무료 계산기",
+      "dateModified": "2026-06-20",
+      "inLanguage": "ko-KR"
+    }
+  ]
+}
+</script>
 
-        /* 상단 브랜딩 헤더 */
-        header { background-color: var(--bg-header); border-bottom: 1px solid #1e293b; padding: 1.5rem 1rem; position: sticky; top: 0; z-index: 100; }
-        .header-container { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; align-items: center; }
-        @media (min-width: 768px) { .header-container { flex-direction: row; justify-content: space-between; } }
-        
-        .brand-zone { text-align: center; }
-        @media (min-width: 768px) { .brand-zone { text-align: left; } }
-        .logo { font-size: 1.8rem; font-weight: 900; color: #fff; letter-spacing: -1px; }
-        .logo span { color: var(--point-color); }
-        .slogan { font-size: 0.85rem; color: var(--text-sub); font-weight: 500; margin-top: 0.2rem; }
-        
-        /* 검색 바 및 실시간 검색 결과창 지능형 레이아웃 */
-        .search-container { width: 100%; max-width: 400px; position: relative; }
-        .search-input { width: 100%; padding: 0.75rem 1.2rem; background: #0f172a; border: 1px solid #334155; border-radius: 50px; color: #fff; font-size: 0.9rem; outline: none; transition: 0.3s; }
-        .search-input:focus { border-color: var(--point-color); }
-        
-        .search-results-box { position: absolute; top: 110%; left: 0; width: 100%; background: #161c2a; border: 1px solid #334155; border-radius: 12px; max-height: 300px; overflow-y: auto; display: none; z-index: 999; box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
-        .search-result-item { padding: 0.8rem 1.2rem; border-bottom: 1px solid #243147; cursor: pointer; transition: 0.2s; }
-        .search-result-item:last-child { border-bottom: none; }
-        .search-result-item:hover { background: #1e293b; }
-        .search-result-title { font-size: 0.9rem; font-weight: 700; color: #fff; }
-        .search-result-cat { font-size: 0.7rem; color: var(--point-color); margin-bottom: 0.2rem; display: block; font-weight: bold; }
-        .no-result { padding: 1.5rem; text-align: center; color: var(--text-sub); font-size: 0.9rem; }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 
-        /* 대분류 GNB 내비게이션 */
-        nav { background-color: var(--bg-nav); border-bottom: 1px solid #1e293b; overflow-x: auto; white-space: nowrap; }
-        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; padding: 0.2rem 1rem; }
-        .nav-item { padding: 1rem 1.2rem; font-weight: 700; color: var(--text-sub); font-size: 0.95rem; position: relative; }
-        .nav-item:hover, .nav-item.active { color: var(--point-color); }
-        .nav-item.active::after { content: ''; position: absolute; bottom: 0; left: 1.2rem; right: 1.2rem; height: 3px; background-color: var(--point-color); }
+<style>
+:root {
+  --primary: #1E3A5F;
+  --primary-light: #EBF2FA;
+  --primary-mid: #16304F;
+  --accent: #E8A020;
+  --accent-light: #FEF3DC;
+  --text: #1A1A1A;
+  --text-muted: #6B7280;
+  --text-light: #9CA3AF;
+  --bg: #F8F9FA;
+  --bg-card: #FFFFFF;
+  --border: #E5E7EB;
+  --border-light: #F3F4F6;
+  --sans: 'Noto Sans KR', sans-serif;
+  --red: #DC2626;
+  --green: #16A34A;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; word-break: keep-all; overflow-wrap: break-word; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); background: var(--bg); color: var(--text); line-height: 1.7; -webkit-text-size-adjust: 100%; }
 
-        /* 메인 레이아웃 (2단 그리드) */
-        .main-wrapper { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr; gap: 2rem; }
-        @media (min-width: 992px) { .main-wrapper { grid-template-columns: 2.6fr 1.4fr; } }
+/* ── NAV ── */
+nav {
+  position: sticky; top: 0; z-index: 200;
+  background: rgba(30,58,95,0.97);
+  backdrop-filter: blur(10px);
+  padding: 0 1.5rem;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 58px; gap: 12px;
+}
+.nav-logo { font-size: 18px; font-weight: 900; color: #fff; text-decoration: none; white-space: nowrap; flex-shrink: 0; letter-spacing: -0.02em; }
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 1.5rem; list-style: none; flex-shrink: 0; }
+.nav-links a { font-size: 13px; color: rgba(255,255,255,0.75); text-decoration: none; transition: color 0.2s; white-space: nowrap; }
+.nav-links a:hover { color: var(--accent); }
+.nav-right { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.nav-cta {
+  background: var(--accent); color: var(--text);
+  font-size: 13px; font-weight: 700;
+  padding: 8px 16px; border-radius: 6px;
+  text-decoration: none; white-space: nowrap;
+  transition: opacity 0.2s; min-height: 36px;
+  display: flex; align-items: center;
+}
+.nav-cta:hover { opacity: 0.9; }
 
-        /* 구글 애드센스 광고 슬롯 */
-        .ads-container { background-color: var(--bg-card); border: 1px dashed var(--ads-border); padding: 1.5rem; text-align: center; border-radius: 12px; color: #475569; font-size: 0.85rem; margin-bottom: 2rem; }
-        .ads-banner-mock { min-height: 100px; display: flex; align-items: center; justify-content: center; background: var(--ads-bg); border-radius: 6px; font-weight: 600; color: #64748b; }
+/* 모바일 검색바 */
+.mobile-search-bar {
+  display: none;
+  background: #16304F;
+  padding: 10px 1rem;
+  position: sticky; top: 58px; z-index: 99;
+}
+.nav-search { position: relative; display: flex; align-items: center; }
+.nav-search-input {
+  width: 100%; padding: 10px 14px 10px 36px;
+  border: 1.5px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.1);
+  font-size: 15px; color: #fff;
+  outline: none; font-family: var(--sans);
+  -webkit-appearance: none;
+}
+.nav-search-input::placeholder { color: rgba(255,255,255,0.5); }
+.nav-search-input:focus { border-color: var(--accent); background: rgba(255,255,255,0.15); }
+.nav-search-icon { position: absolute; left: 10px; font-size: 14px; color: rgba(255,255,255,0.5); pointer-events: none; }
+#search-dropdown, #search-dropdown-mobile {
+  display: none; position: absolute;
+  top: calc(100% + 6px); left: 0; right: 0;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  z-index: 1000; overflow: hidden;
+  max-height: 380px; overflow-y: auto;
+}
+#search-dropdown.active, #search-dropdown-mobile.active { display: block; }
+.search-result-item { display: flex; align-items: flex-start; gap: 10px; padding: 10px 14px; text-decoration: none; color: var(--text); border-bottom: 1px solid var(--border-light); transition: background 0.15s; }
+.search-result-item:hover { background: var(--primary-light); }
+.search-result-cat { font-size: 10px; color: var(--primary); font-weight: 700; margin-bottom: 2px; }
+.search-result-title { font-size: 13px; font-weight: 600; line-height: 1.4; }
+.search-result-title mark { background: var(--accent-light); color: var(--accent); }
+.search-no-result { padding: 20px; text-align: center; color: var(--text-muted); font-size: 13px; }
 
-        /* 콘텐츠 카드 영역 */
-        .section-header { font-size: 1.3rem; font-weight: 800; margin-bottom: 1.2rem; padding-left: 0.8rem; border-left: 4px solid var(--point-color); }
-        .card-grid { display: grid; grid-template-columns: 1fr; gap: 1.2rem; margin-bottom: 3rem; }
-        @media (min-width: 640px) { .card-grid { grid-template-columns: 1fr 1fr; } }
-        
-        .contents-card { background-color: var(--bg-card); border: 1px solid #1e293b; border-radius: 14px; padding: 1.5rem; transition: 0.3s; cursor: pointer; }
-        .contents-card:hover { transform: translateY(-5px); border-color: var(--point-color); }
-        
-        .card-meta { display: flex; gap: 0.5rem; margin-bottom: 0.8rem; }
-        .tag-subcat { font-size: 0.75rem; color: var(--point-color); font-weight: 700; background: rgba(56, 189, 248, 0.1); padding: 0.25rem 0.6rem; border-radius: 6px; }
-        
-        .card-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.6rem; color: var(--text-main); line-height: 1.4; }
-        .card-preview { font-size: 0.9rem; color: var(--text-sub); }
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(135deg, #0F2340 0%, #1E3A5F 50%, #2A5080 100%);
+  padding: 64px 1.5rem 56px;
+  text-align: center; position: relative; overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 70% 50%, rgba(232,160,32,0.1) 0%, transparent 60%);
+  pointer-events: none;
+}
+.hero-inner { max-width: 780px; margin: 0 auto; position: relative; }
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(232,160,32,0.15);
+  color: var(--accent); font-size: 12px; font-weight: 700;
+  letter-spacing: 0.06em; padding: 5px 14px; border-radius: 20px;
+  margin-bottom: 20px; border: 1px solid rgba(232,160,32,0.3);
+}
+.hero h1 {
+  font-size: clamp(22px, 5vw, 42px);
+  line-height: 1.25; color: #fff; margin-bottom: 16px;
+  font-weight: 900; letter-spacing: -0.02em;
+}
+.hero h1 em { font-style: normal; color: var(--accent); }
+.hero-sub { font-size: clamp(13px, 2.5vw, 15px); color: rgba(255,255,255,0.75); max-width: 560px; margin: 0 auto 28px; line-height: 1.7; }
+.hero-keywords { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 32px; }
+.hero-kw {
+  background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.85);
+  font-size: 12px; font-weight: 600; padding: 6px 14px;
+  border-radius: 20px; border: 1px solid rgba(255,255,255,0.2);
+  text-decoration: none; transition: all 0.2s;
+}
+.hero-kw:hover { background: var(--accent); color: var(--text); border-color: var(--accent); }
+.hero-btns { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.btn-primary {
+  background: var(--accent); color: var(--text);
+  padding: 14px 28px; border-radius: 8px;
+  font-size: 15px; font-weight: 700; text-decoration: none;
+  transition: opacity 0.2s; min-height: 44px;
+  display: inline-flex; align-items: center;
+}
+.btn-primary:hover { opacity: 0.9; }
+.btn-secondary {
+  background: rgba(255,255,255,0.1); color: #fff;
+  padding: 14px 28px; border-radius: 8px;
+  font-size: 15px; border: 1.5px solid rgba(255,255,255,0.3);
+  text-decoration: none; transition: all 0.2s;
+  min-height: 44px; display: inline-flex; align-items: center;
+}
+.btn-secondary:hover { background: rgba(255,255,255,0.2); }
 
-        /* 우측 사이드바 */
-        .sidebar-zone { display: flex; flex-direction: column; gap: 1.8rem; }
-        .widget-box { background: #161c2a; border: 1px solid #243147; border-radius: 14px; padding: 1.5rem; }
-        .widget-title { font-size: 1.1rem; font-weight: 800; margin-bottom: 1rem; }
-        .widget-title span { color: var(--point-color); }
-        .widget-desc { font-size: 0.85rem; color: var(--text-sub); margin-bottom: 1.2rem; }
-        
-        .calc-link-btn { display: block; width: 100%; padding: 0.9rem; background: #0284c7; text-align: center; border-radius: 8px; font-weight: 700; font-size: 0.9rem; margin-bottom: 0.6rem; color: #fff; border: none; cursor: pointer; }
-        
-        /* 하단 푸터 */
-        footer { background-color: var(--bg-header); border-top: 1px solid #1e293b; padding: 3rem 1rem; text-align: center; color: var(--text-sub); font-size: 0.85rem; margin-top: 5rem; }
-        .footer-logo { font-size: 1.4rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem; }
-        .footer-info { max-width: 600px; margin: 1rem auto 0; color: #475569; font-size: 0.8rem; line-height: 1.5; }
-    </style>
+/* ── STATS ── */
+.stats-bar { background: var(--accent); padding: 16px 1.5rem; }
+.stats-inner { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 10px; }
+.stat { text-align: center; }
+.stat-num { font-size: 22px; font-weight: 900; color: var(--text); }
+.stat-label { font-size: 11px; color: rgba(0,0,0,0.6); margin-top: 2px; }
+
+/* ── 공통 섹션 ── */
+.section { padding: 52px 1.5rem; max-width: 1000px; margin: 0 auto; }
+.section-header { margin-bottom: 24px; }
+.section-eyebrow { font-size: 11px; font-weight: 700; color: var(--primary); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; }
+.section-title-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.section-title { font-size: clamp(18px, 3vw, 24px); font-weight: 900; color: var(--text); line-height: 1.3; }
+.see-all { font-size: 13px; color: var(--primary); text-decoration: none; white-space: nowrap; flex-shrink: 0; font-weight: 600; }
+.see-all:hover { text-decoration: underline; }
+.divider { border: none; border-top: 1px solid var(--border-light); margin: 0 1.5rem; }
+
+/* ── 계산기 메인 그리드 ── */
+.calc-main-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+}
+.calc-main-card {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  border-radius: 14px; padding: 18px 20px;
+  text-decoration: none; color: var(--text);
+  display: flex; align-items: center; gap: 14px;
+  transition: all 0.2s; min-height: 76px;
+}
+.calc-main-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(30,58,95,0.12);
+}
+.cmc-icon { font-size: 26px; flex-shrink: 0; line-height: 1; }
+.cmc-body { flex: 1; min-width: 0; }
+.cmc-title { font-size: 14px; font-weight: 700; margin-bottom: 3px; line-height: 1.3; }
+.cmc-desc { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+.cmc-badge {
+  display: inline-block; font-size: 9px; font-weight: 700;
+  background: var(--primary-light); color: var(--primary);
+  padding: 2px 7px; border-radius: 20px; margin-top: 4px;
+}
+.cmc-arrow { color: var(--primary); font-size: 15px; flex-shrink: 0; }
+
+/* ── 인기 계산기 (배지형) ── */
+.calc-pop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+.calc-pop-card {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  border-radius: 12px; padding: 16px 14px;
+  text-decoration: none; color: var(--text);
+  text-align: center; transition: all 0.2s;
+  display: flex; flex-direction: column; align-items: center; gap: 7px;
+}
+.calc-pop-card:hover { border-color: var(--primary); transform: translateY(-2px); box-shadow: 0 4px 14px rgba(30,58,95,0.1); }
+.cpc-icon { font-size: 28px; line-height: 1; }
+.cpc-title { font-size: 12px; font-weight: 700; line-height: 1.3; }
+.cpc-use { font-size: 10px; color: var(--text-muted); }
+.badge-hot { font-size: 9px; font-weight: 700; background: #FEF2F2; color: #DC2626; padding: 2px 7px; border-radius: 20px; }
+.badge-new { font-size: 9px; font-weight: 700; background: #F0FDF4; color: #16A34A; padding: 2px 7px; border-radius: 20px; }
+.badge-tip { font-size: 9px; font-weight: 700; background: var(--accent-light); color: #92400E; padding: 2px 7px; border-radius: 20px; }
+
+/* ── 최신 가이드 ── */
+.article-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.article-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; text-decoration: none; color: var(--text); transition: all 0.2s; display: block; }
+.article-card:hover { border-color: var(--primary); box-shadow: 0 4px 20px rgba(30,58,95,0.1); transform: translateY(-2px); }
+.article-thumb { height: 110px; display: flex; align-items: center; justify-content: center; font-size: 36px; }
+.article-body { padding: 14px 16px 18px; }
+.article-tag { display: inline-block; background: var(--primary-light); color: var(--primary); font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 20px; margin-bottom: 7px; }
+.article-title { font-size: 14px; font-weight: 700; line-height: 1.5; margin-bottom: 7px; }
+.article-summary { font-size: 12px; color: var(--text-muted); line-height: 1.6; margin-bottom: 8px; }
+.article-meta { font-size: 11px; color: var(--text-light); }
+
+/* ── TOP5 ── */
+.top5-list { display: flex; flex-direction: column; }
+.top5-item { display: flex; align-items: center; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--border-light); text-decoration: none; color: var(--text); transition: color 0.2s; }
+.top5-item:last-child { border-bottom: none; }
+.top5-item:hover .top5-title { color: var(--primary); }
+.top5-num { font-size: 20px; font-weight: 900; color: var(--border); width: 28px; flex-shrink: 0; text-align: center; }
+.top5-num.r1 { color: var(--primary); }
+.top5-num.r2 { color: #2563EB; }
+.top5-num.r3 { color: #0891B2; }
+.top5-body { flex: 1; min-width: 0; }
+.top5-tag { font-size: 10px; color: var(--primary); font-weight: 700; margin-bottom: 3px; }
+.top5-title { font-size: 14px; font-weight: 600; line-height: 1.4; }
+.top5-meta { font-size: 11px; color: var(--text-light); margin-top: 2px; }
+.top5-icon { font-size: 24px; flex-shrink: 0; }
+
+/* ── 카테고리 ── */
+.cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 12px; }
+.cat-card { background: var(--bg-card); border: 1.5px solid var(--border); border-radius: 12px; padding: 18px 14px; text-decoration: none; color: var(--text); transition: all 0.2s; display: block; text-align: center; }
+.cat-card:hover { border-color: var(--primary); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(30,58,95,0.08); }
+.cat-icon { font-size: 26px; margin-bottom: 9px; }
+.cat-name { font-size: 13px; font-weight: 700; margin-bottom: 3px; }
+.cat-count { font-size: 11px; color: var(--text-muted); }
+
+/* ── 커뮤니티 인기 섹션 ── */
+.community-section { background: var(--primary); padding: 48px 1.5rem; }
+.community-inner { max-width: 1000px; margin: 0 auto; }
+.community-section .section-eyebrow { color: var(--accent); }
+.community-section .section-title { color: #fff; }
+.community-section .see-all { color: var(--accent); }
+.comm-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin-top: 24px; }
+.comm-card { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 12px; padding: 18px; text-decoration: none; color: #fff; transition: all 0.2s; }
+.comm-card:hover { background: rgba(255,255,255,0.14); transform: translateY(-2px); }
+.comm-source { font-size: 10px; color: var(--accent); font-weight: 700; margin-bottom: 6px; letter-spacing: 0.04em; }
+.comm-title { font-size: 13px; font-weight: 600; line-height: 1.5; margin-bottom: 6px; }
+.comm-desc { font-size: 11px; color: rgba(255,255,255,0.6); line-height: 1.5; }
+.comm-badge { display: inline-block; background: rgba(232,160,32,0.2); color: var(--accent); font-size: 9px; font-weight: 700; padding: 2px 7px; border-radius: 20px; margin-top: 8px; }
+
+/* ── 체크리스트 ── */
+.checklist-wrap { padding: 48px 1.5rem; }
+.checklist-box { max-width: 1000px; margin: 0 auto; background: var(--primary-light); border: 1.5px solid rgba(30,58,95,0.2); border-radius: 16px; padding: 32px; }
+.checklist-box h2 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+.checklist-box p { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; }
+.checklist-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
+.check-item { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; background: #fff; border-radius: 10px; padding: 12px 14px; border: 1px solid rgba(30,58,95,0.12); cursor: pointer; transition: background 0.15s; user-select: none; line-height: 1.5; }
+.check-item:hover { background: rgba(30,58,95,0.04); }
+.check-item input { width: 16px; height: 16px; flex-shrink: 0; accent-color: var(--primary); margin-top: 1px; cursor: pointer; }
+.check-item.done { opacity: 0.5; text-decoration: line-through; }
+
+/* ── 광고 ── */
+.ad-block { text-align: center; padding: 16px 1.5rem; max-width: 1000px; margin: 0 auto; }
+
+/* ── FOOTER ── */
+footer { background: #0A1628; color: rgba(255,255,255,0.5); padding: 40px 1.5rem 24px; margin-top: 40px; }
+.footer-inner { max-width: 1000px; margin: 0 auto; }
+.footer-top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 24px; margin-bottom: 28px; }
+.footer-logo { font-size: 16px; font-weight: 900; color: #fff; margin-bottom: 8px; }
+.footer-logo span { color: var(--accent); }
+.footer-tagline { font-size: 12px; line-height: 1.6; max-width: 280px; }
+.footer-nav { display: flex; flex-wrap: wrap; gap: 14px 22px; align-items: flex-start; }
+.footer-nav a { font-size: 12px; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; white-space: nowrap; }
+.footer-nav a:hover { color: var(--accent); }
+.footer-divider { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin-bottom: 18px; }
+.footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 11px; }
+
+/* ── UX 공통 ── */
+#progress-bar { position: fixed; top: 0; left: 0; height: 3px; width: 0%; background: var(--accent); z-index: 9999; transition: width 0.1s; }
+#back-to-top { position: fixed; bottom: 80px; right: 16px; width: 44px; height: 44px; background: var(--primary); color: #fff; border: none; border-radius: 50%; font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 14px rgba(30,58,95,0.35); opacity: 0; pointer-events: none; transition: opacity 0.3s; z-index: 500; }
+#back-to-top.visible { opacity: 1; pointer-events: auto; }
+#sticky-cta { position: fixed; bottom: 0; left: 0; right: 0; background: var(--primary); color: #fff; padding: 12px 1.5rem; display: flex; align-items: center; justify-content: center; gap: 14px; z-index: 800; transform: translateY(110%); transition: transform 0.4s cubic-bezier(0.16,1,0.3,1); box-shadow: 0 -4px 24px rgba(0,0,0,0.2); }
+#sticky-cta.visible { transform: translateY(0); }
+#sticky-cta p { font-size: 13px; color: rgba(255,255,255,0.85); margin: 0; white-space: nowrap; }
+#sticky-cta a { background: var(--accent); color: var(--text); font-size: 13px; font-weight: 700; padding: 9px 18px; border-radius: 8px; text-decoration: none; flex-shrink: 0; min-height: 36px; display: flex; align-items: center; }
+#sticky-cta-close { background: none; border: none; color: rgba(255,255,255,0.5); font-size: 20px; cursor: pointer; padding: 4px; line-height: 1; flex-shrink: 0; }
+
+/* ── 모바일 ── */
+@media (max-width: 768px) {
+  nav .nav-links { display: none; }
+  nav .nav-search { display: none; }
+  .mobile-search-bar { display: block; }
+  nav { padding: 0 1rem; }
+  #sticky-cta { flex-wrap: wrap; padding: 10px 1rem; }
+  #sticky-cta p { font-size: 12px; width: 100%; text-align: center; }
+  #sticky-cta a { flex: 1; justify-content: center; }
+}
+@media (max-width: 640px) {
+  .hero { padding: 44px 1rem 40px; }
+  .section { padding: 36px 1rem; }
+  .calc-main-grid { grid-template-columns: 1fr; }
+  .calc-pop-grid { grid-template-columns: 1fr 1fr; }
+  .article-grid { grid-template-columns: 1fr; }
+  .cat-grid { grid-template-columns: 1fr 1fr; }
+  .comm-grid { grid-template-columns: 1fr; }
+  .checklist-grid { grid-template-columns: 1fr; }
+  .hero-btns { flex-direction: column; align-items: stretch; }
+  .btn-primary, .btn-secondary { text-align: center; justify-content: center; }
+  .divider { margin: 0 1rem; }
+  .checklist-wrap { padding: 36px 1rem; }
+  .community-section { padding: 36px 1rem; }
+  .footer-top { flex-direction: column; }
+  .top5-icon { display: none; }
+  .ad-block { padding: 12px 1rem; }
+}
+@media (max-width: 380px) {
+  .calc-pop-grid { grid-template-columns: 1fr 1fr; }
+  .cat-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
 </head>
 <body>
+<div id="progress-bar"></div>
 
-    <!-- 상단 헤더 (실시간 검색 박스 포함) -->
-    <header>
-        <div class="header-container">
-            <div class="brand-zone">
-                <div class="logo">CAR<span>BAEKGWA</span></div>
-                <div class="slogan">자동차의 모든 정보, 한곳에서.</div>
-            </div>
-            <div class="search-container">
-                <input type="text" id="searchInput" class="search-input" placeholder="렌트, 리스, 신차 비교, 정비 팁 검색...">
-                <!-- 실시간 검색 결과가 드롭다운 형태로 나타날 박스 -->
-                <div id="searchResults" class="search-results-box"></div>
-            </div>
-        </div>
-    </header>
-
-    <!-- 내비게이션 메뉴 -->
-    <nav>
-        <div class="nav-container">
-            <a href="#" class="nav-item active">종합 홈</a>
-            <a href="./purchase/rent-lease/장기렌트-리스-결정적-차이.html" class="nav-item">자동차 구매 & 금융</a>
-            <a href="#" class="nav-item">차량 비교 & 가이드</a>
-            <a href="#" class="nav-item">유지관리 & 상식</a>
-        </div>
-    </nav>
-
-    <!-- 메인 레이아웃 -->
-    <div class="main-wrapper">
-        
-        <!-- 왼쪽 콘텐츠 그리드 -->
-        <main>
-            <div class="ads-container">
-                <div class="ads-banner-mock">구글 애드센스 상단 반응형 광고 (추천: 728x90)</div>
-            </div>
-
-            <div class="section-header">
-                <div>💰 자동차 구매 & 금융 노하우</div>
-            </div>
-            <div class="card-grid">
-                <div class="contents-card" onclick="location.href='./purchase/rent-lease/장기렌트-리스-결정적-차이.html'">
-                    <div>
-                        <div class="card-meta"><span class="tag-subcat">렌트/리스</span></div>
-                        <div class="card-title">장기렌트와 자동차 리스의 결정적 차이점 TOP 5</div>
-                        <div class="card-preview">세제 혜택부터 번호판 종류, 보험 경력 유지 여부까지 나에게 딱 맞는 최적의 자동차 금융 상품을 명쾌하게 비교해 드립니다.</div>
-                    </div>
-                </div>
-                <div class="contents-card" onclick="alert('콘텐츠 준비 중입니다.');">
-                    <div>
-                        <div class="card-meta"><span class="tag-subcat">자동차 금융</span></div>
-                        <div class="card-title">금융사 및 캐피탈사마다 장기렌트 견적이 다른 비밀</div>
-                        <div class="card-preview">왜 똑같은 차종과 옵션인데 월 납입료가 수만 원씩 차이 날까요? 조달 금리와 잔존 가치 산정 방식의 숨겨진 구조를 파헤칩니다.</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="ads-container">
-                <div class="ads-banner-mock">구글 애드센스 본문 중간 삽입형 광고</div>
-            </div>
-        </main>
-
-        <!-- 오른쪽 사이드바 -->
-        <aside class="sidebar-zone">
-            <div class="widget-box">
-                <div class="widget-title">⚙️ 카백과 <span>스마트 금융 툴</span></div>
-                <div class="widget-desc">금융 계산기 및 세금 모의 계산기 영역입니다.</div>
-                <button class="calc-link-btn" id="calc-trigger-btn">월 장기렌트료 모의 계산기</button>
-            </div>
-        </aside>
-
+<!-- ── NAV ── -->
+<nav>
+  <a href="index.html" class="nav-logo">CAR<span>百科</span></a>
+  <ul class="nav-links">
+    <li><a href="calcs.html">🧮 계산기</a></li>
+    <li><a href="category.html#purchase">구매·금융</a></li>
+    <li><a href="category.html#maintain">유지관리</a></li>
+    <li><a href="category.html#ev">전기차</a></li>
+    <li><a href="category.html">전체 글</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="nav-search" style="position:relative;">
+      <span class="nav-search-icon">🔍</span>
+      <input type="text" id="search-input" class="nav-search-input" placeholder="검색..." autocomplete="off" style="width:170px;padding:7px 14px 7px 32px;border:1.5px solid rgba(255,255,255,0.25);border-radius:20px;background:rgba(255,255,255,0.1);color:#fff;font-size:13px;outline:none;font-family:var(--sans);">
+      <div id="search-dropdown" style="width:300px;right:0;left:auto;"></div>
     </div>
+    <a href="calcs.html" class="nav-cta">무료 계산기</a>
+  </div>
+</nav>
 
-    <!-- 하단 푸터 -->
-    <footer>
-        <div class="footer-logo">카백과</div>
-        <div>자동차의 모든 정보, 한곳에서.</div>
-        <div class="footer-info">
-            © 2026 CAR BAEKGWA. All Rights Reserved.<br>
-            본 플랫폼은 신차, 중고차, 장기렌트 및 리스, 차량 유지관리와 금융 정보까지<br>
-            운전자에게 필요한 국내외 유용한 자동차 종합 정보를 쉽고 정확하게 알려주는 전문 정보 사이트입니다.
-        </div>
-    </footer>
+<!-- 모바일 검색바 -->
+<div class="mobile-search-bar">
+  <div class="nav-search" style="width:100%;">
+    <span class="nav-search-icon">🔍</span>
+    <input type="text" id="search-input-mobile" class="nav-search-input" placeholder="계산기·자동차 정보 검색..." autocomplete="off">
+    <div id="search-dropdown-mobile"></div>
+  </div>
+</div>
 
-    <!-- 실시간 인메모리 검색 제어 자바스크립트 엔진 -->
-    <script>
-        // 1. 포털 내부 검색 데이터베이스 색인 (새로운 글이 추가되면 여기에 추가해주면 됩니다)
-        const searchDatabase = [
-            {
-                title: "장기렌트와 자동차 리스의 결정적 차이점 TOP 5",
-                category: "렌트/리스",
-                url: "./purchase/rent-lease/장기렌트-리스-결정적-차이.html",
-                keywords: ["렌트", "리스", "장기렌트", "번호판", "자동차금융", "세제혜택"]
-            },
-            {
-                title: "금융사 및 캐피탈사마다 장기렌트 견적이 다른 비밀",
-                category: "자동차 금융",
-                url: "#",
-                keywords: ["견적", "캐피탈", "렌트료", "조달금리", "잔존가치"]
-            }
-        ];
+<!-- ── 1. HERO ── -->
+<section class="hero" aria-labelledby="hero-h1">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">🚗 대한민국 자동차 오너를 위한 모든 것</div>
+    <h1 id="hero-h1">
+      자동차 <em>무료 계산기</em> 12가지와<br>
+      실전 정보를 한곳에서
+    </h1>
+    <p class="hero-sub">
+      취등록세·자동차세·장기렌트·연비·전기차 충전비까지<br>
+      보배드림·Reddit·PistonHeads 커뮤니티 검증 실전 가이드와 함께
+    </p>
+    <div class="hero-keywords">
+      <a href="calc-acquisition-tax.html" class="hero-kw">취등록세</a>
+      <a href="calc-car-tax.html" class="hero-kw">자동차세</a>
+      <a href="calc-rent-lease.html" class="hero-kw">렌트 vs 리스</a>
+      <a href="calc-fuel-cost.html" class="hero-kw">연료비 계산</a>
+      <a href="calc-ev-charge.html" class="hero-kw">전기차 충전비</a>
+      <a href="calc-depreciation.html" class="hero-kw">감가상각</a>
+      <a href="calc-tco.html" class="hero-kw">총 소유비용</a>
+      <a href="calc-insurance.html" class="hero-kw">보험료 예상</a>
+    </div>
+    <div class="hero-btns">
+      <a href="calcs.html" class="btn-primary">🧮 무료 계산기 전체 보기</a>
+      <a href="category.html" class="btn-secondary">실전 가이드 보기 →</a>
+    </div>
+  </div>
+</section>
 
-        const searchInput = document.getElementById('searchInput');
-        const searchResults = document.getElementById('searchResults');
+<!-- ── STATS ── -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat"><div class="stat-num">12가지</div><div class="stat-label">무료 자동차 계산기</div></div>
+    <div class="stat"><div class="stat-num">50+</div><div class="stat-label">실전 자동차 가이드</div></div>
+    <div class="stat"><div class="stat-num">무료</div><div class="stat-label">모든 서비스 무료</div></div>
+    <div class="stat"><div class="stat-num">커뮤니티</div><div class="stat-label">검증 정보만 수록</div></div>
+  </div>
+</div>
 
-        // 2. 실시간 키워드 감지 및 화면 렌더링 로직
-        searchInput.addEventListener('input', function() {
-            const query = this.value.trim().toLowerCase();
-            searchResults.innerHTML = '';
+<!-- ── 2. 자주 사용하는 계산기 ── -->
+<section class="section" aria-labelledby="calc-h2">
+  <div class="section-header">
+    <div class="section-eyebrow">FREE CALCULATOR</div>
+    <div class="section-title-row">
+      <h2 class="section-title" id="calc-h2">자주 사용하는 무료 계산기</h2>
+      <a href="calcs.html" class="see-all">전체 계산기 보기 →</a>
+    </div>
+    <p style="font-size:13px;color:var(--text-muted);margin-top:6px;">차 살 때, 유지할 때, 팔 때 — 단계마다 필요한 계산기</p>
+  </div>
+  <div class="calc-main-grid">
+    <a href="calc-acquisition-tax.html" class="calc-main-card">
+      <div class="cmc-icon">📋</div>
+      <div class="cmc-body">
+        <div class="cmc-title">취등록세 계산기</div>
+        <div class="cmc-desc">차량가격 → 취득세+교육세+공채 총비용</div>
+        <div class="cmc-badge">신차·중고차·전기차 모두 지원</div>
+      </div>
+      <div class="cmc-arrow">→</div>
+    </a>
+    <a href="calc-car-tax.html" class="calc-main-card">
+      <div class="cmc-icon">🏛️</div>
+      <div class="cmc-body">
+        <div class="cmc-title">자동차세 계산기</div>
+        <div class="cmc-desc">배기량·연식 → 연간 자동차세+교육세</div>
+        <div class="cmc-badge">차령 할인·연납 5% 할인 반영</div>
+      </div>
+      <div class="cmc-arrow">→</div>
+    </a>
+    <a href="calc-rent-lease.html" class="calc-main-card">
+      <div class="cmc-icon">🔑</div>
+      <div class="cmc-body">
+        <div class="cmc-title">장기렌트 vs 리스 비교 계산기</div>
+        <div class="cmc-desc">동일 조건으로 렌트·리스 월납입료 직접 비교</div>
+        <div class="cmc-badge">2026년 최신 금리 반영</div>
+      </div>
+      <div class="cmc-arrow">→</div>
+    </a>
+    <a href="calc-fuel-cost.html" class="calc-main-card">
+      <div class="cmc-icon">⛽</div>
+      <div class="cmc-body">
+        <div class="cmc-title">연비·연료비 계산기</div>
+        <div class="cmc-desc">주행거리·연비·유가 → 월·연간 연료비</div>
+        <div class="cmc-badge">휘발유·경유·LPG 모두 지원</div>
+      </div>
+      <div class="cmc-arrow">→</div>
+    </a>
+    <a href="calc-ev-charge.html" class="calc-main-card">
+      <div class="cmc-icon">⚡</div>
+      <div class="cmc-body">
+        <div class="cmc-title">전기차 충전비 계산기</div>
+        <div class="cmc-desc">배터리 용량·전기요금 → 충전비+내연기관 비교</div>
+        <div class="cmc-badge">급속·완속·홈충전 구분</div>
+      </div>
+      <div class="cmc-arrow">→</div>
+    </a>
+    <a href="calc-depreciation.html" class="calc-main-card">
+      <div class="cmc-icon">📉</div>
+      <div class="cmc-body">
+        <div class="cmc-title">감가상각 계산기</div>
+        <div class="cmc-desc">구매가·연식·주행거리 → 현재 차량 가치</div>
+        <div class="cmc-badge">중고차 시세 기반</div>
+      </div>
+      <div class="cmc-arrow">→</div>
+    </a>
+  </div>
+</section>
 
-            if (query === '') {
-                searchResults.style.display = 'none';
-                return;
-            }
+<div class="divider"></div>
 
-            // 키워드 매칭 필터링
-            const filtered = searchDatabase.filter(item => {
-                return item.title.toLowerCase().includes(query) || 
-                       item.category.toLowerCase().includes(query) ||
-                       item.keywords.some(keyword => keyword.toLowerCase().includes(query));
-            });
+<!-- ── 3. 인기 계산기 ── -->
+<section class="section" aria-labelledby="pop-h2">
+  <div class="section-header">
+    <div class="section-eyebrow">POPULAR</div>
+    <div class="section-title-row">
+      <h2 class="section-title" id="pop-h2">인기 계산기</h2>
+      <a href="calcs.html" class="see-all">전체 보기 →</a>
+    </div>
+  </div>
+  <div class="calc-pop-grid">
+    <a href="calc-tco.html" class="calc-pop-card">
+      <div class="cpc-icon">💰</div>
+      <div class="cpc-title">총 소유비용(TCO)</div>
+      <div class="cpc-use">5년간 실제 총비용</div>
+      <span class="badge-hot">Reddit 인기</span>
+    </a>
+    <a href="calc-insurance.html" class="calc-pop-card">
+      <div class="cpc-icon">🛡️</div>
+      <div class="cpc-title">보험료 예상 계산기</div>
+      <div class="cpc-use">차종·등급→예상 보험료</div>
+      <span class="badge-hot">검색량 1위</span>
+    </a>
+    <a href="calc-hire-purchase.html" class="calc-pop-card">
+      <div class="cpc-icon">🏦</div>
+      <div class="cpc-title">할부 이자 계산기</div>
+      <div class="cpc-use">원리금균등·원금균등</div>
+      <span class="badge-tip">구매 필수</span>
+    </a>
+    <a href="calc-used-price.html" class="calc-pop-card">
+      <div class="cpc-icon">🔍</div>
+      <div class="cpc-title">중고차 적정가 계산기</div>
+      <div class="cpc-use">연식·주행거리→적정가</div>
+      <span class="badge-new">신규</span>
+    </a>
+    <a href="calc-tire.html" class="calc-pop-card">
+      <div class="cpc-icon">🔧</div>
+      <div class="cpc-title">타이어 교체비 계산기</div>
+      <div class="cpc-use">사이즈별 견적 산출</div>
+      <span class="badge-tip">유지관리</span>
+    </a>
+    <a href="calc-mileage.html" class="calc-pop-card">
+      <div class="cpc-icon">📍</div>
+      <div class="cpc-title">주행거리 비용 계산기</div>
+      <div class="cpc-use">km당 실제 비용</div>
+      <span class="badge-tip">가성비 분석</span>
+    </a>
+  </div>
+</section>
 
-            if (filtered.length > 0) {
-                filtered.forEach(item => {
-                    const div = document.createElement('div');
-                    div.className = 'search-result-item';
-                    div.innerHTML = `
-                        <span class="search-result-cat">${item.category}</span>
-                        <div class="search-result-title">${item.title}</div>
-                    `;
-                    div.addEventListener('click', function() {
-                        if (item.url === '#') {
-                            alert('콘텐츠 준비 중입니다.');
-                        } else {
-                            location.href = item.url;
-                        }
-                    });
-                    searchResults.appendChild(div);
-                });
-                searchResults.style.display = 'block';
-            } else {
-                searchResults.innerHTML = '<div class="no-result">검색 결과가 없습니다.</div>';
-                searchResults.style.display = 'block';
-            }
-        });
+<div class="divider"></div>
 
-        // 클릭 이탈 시 검색창 닫기
-        document.addEventListener('click', function(e) {
-            if (!e.target.closest('.search-container')) {
-                searchResults.style.display = 'none';
-            }
-        });
-    </script>
-<!-- 🧮 자동차 금융 계산기 실전 구동 스크립트 -->
+<!-- ── 4. 최신 실전 가이드 ── -->
+<section class="section" aria-labelledby="guide-h2">
+  <div class="section-header">
+    <div class="section-eyebrow">LATEST GUIDE</div>
+    <div class="section-title-row">
+      <h2 class="section-title" id="guide-h2">최신 실전 가이드</h2>
+      <a href="category.html" class="see-all">전체 보기 →</a>
+    </div>
+  </div>
+  <div class="article-grid">
+    <a href="guide-rent-vs-lease-vs-buy.html" class="article-card">
+      <div class="article-thumb" style="background:#EBF2FA;">🔑</div>
+      <div class="article-body">
+        <div class="article-tag">구매·금융</div>
+        <h3 class="article-title">장기렌트 vs 리스 vs 할부 — 2026년 최신 완전 비교</h3>
+        <p class="article-summary">같은 차를 3가지 방법으로 사면 5년간 얼마가 다를까? 실제 계산 결과로 비교합니다.</p>
+        <div class="article-meta">2026.06.20 · 10분</div>
+      </div>
+    </a>
+    <a href="guide-ev-vs-gasoline-real-cost.html" class="article-card">
+      <div class="article-thumb" style="background:#F0FDF4;">⚡</div>
+      <div class="article-body">
+        <div class="article-tag">전기차</div>
+        <h3 class="article-title">전기차 vs 내연기관 실제 유지비 비교 — 5년 총비용 계산</h3>
+        <p class="article-summary">클리앙 굴러간당에서 가장 많이 논의된 주제. 전기료·보험·정비비까지 전부 포함한 현실 계산.</p>
+        <div class="article-meta">2026.06.19 · 9분</div>
+      </div>
+    </a>
+    <a href="guide-used-car-checklist.html" class="article-card">
+      <div class="article-thumb" style="background:#FEF3DC;">🔍</div>
+      <div class="article-body">
+        <div class="article-tag">중고차</div>
+        <h3 class="article-title">중고차 사기 당하지 않는 법 — 현장에서 바로 체크하는 30가지</h3>
+        <p class="article-summary">보배드림 중고차게시판 고수들이 수년간 정리한 필수 체크리스트. 계약 전 반드시 확인하세요.</p>
+        <div class="article-meta">2026.06.18 · 12분</div>
+      </div>
+    </a>
+    <a href="guide-acquisition-tax-save.html" class="article-card">
+      <div class="article-thumb" style="background:#EBF2FA;">📋</div>
+      <div class="article-body">
+        <div class="article-tag">세금·금융</div>
+        <h3 class="article-title">취등록세 절약하는 5가지 방법 — 최대 140만원 아끼는 법</h3>
+        <p class="article-summary">전기차 세금 감면, 경차 혜택, 공채 절약까지 2026년 기준 모든 감면 방법 총정리.</p>
+        <div class="article-meta">2026.06.17 · 8분</div>
+      </div>
+    </a>
+    <a href="guide-car-insurance-lower.html" class="article-card">
+      <div class="article-thumb" style="background:#F5F3FF;">🛡️</div>
+      <div class="article-body">
+        <div class="article-tag">보험</div>
+        <h3 class="article-title">자동차 보험료 낮추는 실전 방법 10가지 — 커뮤니티 검증</h3>
+        <p class="article-summary">블랙박스 할인, 마일리지 특약, 중복 담보 정리 등 실제로 효과 있는 방법만 추렸습니다.</p>
+        <div class="article-meta">2026.06.16 · 7분</div>
+      </div>
+    </a>
+    <a href="guide-engine-oil-diy.html" class="article-card">
+      <div class="article-thumb" style="background:#FEF3DC;">🔧</div>
+      <div class="article-body">
+        <div class="article-tag">유지관리</div>
+        <h3 class="article-title">엔진오일 직접 교환하면 얼마나 아낄까 — DIY vs 공임나라</h3>
+        <p class="article-summary">r/CarDIY, 보배드림 정비 게시판에서 인기 폭발한 실전 비용 비교. 공구 초기비용까지 포함 계산.</p>
+        <div class="article-meta">2026.06.15 · 6분</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- 광고 1 -->
+<div class="ad-block">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4059494172804910" data-ad-slot="여기에_슬롯ID" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<div class="divider"></div>
+
+<!-- ── 5. 오늘 인기글 TOP5 ── -->
+<section class="section" aria-labelledby="top5-h2">
+  <div class="section-header">
+    <div class="section-eyebrow">TODAY TOP 5</div>
+    <div class="section-title-row">
+      <h2 class="section-title" id="top5-h2">오늘 인기글 TOP 5</h2>
+      <a href="category.html" class="see-all">더 보기 →</a>
+    </div>
+  </div>
+  <nav class="top5-list" aria-label="인기글 순위">
+    <a href="guide-rent-vs-lease-vs-buy.html" class="top5-item">
+      <span class="top5-num r1">1</span>
+      <div class="top5-body">
+        <div class="top5-tag">구매·금융</div>
+        <div class="top5-title">장기렌트 vs 리스 vs 할부 — 2026년 최신 완전 비교</div>
+        <div class="top5-meta">2026.06.20 · 10분</div>
+      </div>
+      <div class="top5-icon">🔑</div>
+    </a>
+    <a href="guide-ev-vs-gasoline-real-cost.html" class="top5-item">
+      <span class="top5-num r2">2</span>
+      <div class="top5-body">
+        <div class="top5-tag">전기차</div>
+        <div class="top5-title">전기차 vs 내연기관 실제 유지비 — 5년 총비용 현실 계산</div>
+        <div class="top5-meta">2026.06.19 · 9분</div>
+      </div>
+      <div class="top5-icon">⚡</div>
+    </a>
+    <a href="guide-used-car-checklist.html" class="top5-item">
+      <span class="top5-num r3">3</span>
+      <div class="top5-body">
+        <div class="top5-tag">중고차</div>
+        <div class="top5-title">중고차 사기 당하지 않는 법 — 현장 체크리스트 30가지</div>
+        <div class="top5-meta">2026.06.18 · 12분</div>
+      </div>
+      <div class="top5-icon">🔍</div>
+    </a>
+    <a href="guide-acquisition-tax-save.html" class="top5-item">
+      <span class="top5-num">4</span>
+      <div class="top5-body">
+        <div class="top5-tag">세금·금융</div>
+        <div class="top5-title">취등록세 최대 140만원 아끼는 5가지 방법</div>
+        <div class="top5-meta">2026.06.17 · 8분</div>
+      </div>
+      <div class="top5-icon">📋</div>
+    </a>
+    <a href="guide-car-insurance-lower.html" class="top5-item">
+      <span class="top5-num">5</span>
+      <div class="top5-body">
+        <div class="top5-tag">보험</div>
+        <div class="top5-title">자동차 보험료 낮추는 실전 방법 10가지</div>
+        <div class="top5-meta">2026.06.16 · 7분</div>
+      </div>
+      <div class="top5-icon">🛡️</div>
+    </a>
+  </nav>
+</section>
+
+<!-- 광고 2 -->
+<div class="ad-block">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4059494172804910" data-ad-slot="여기에_슬롯ID2" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<div class="divider"></div>
+
+<!-- ── 6. 카테고리 ── -->
+<section class="section" aria-labelledby="cat-h2">
+  <div class="section-header">
+    <div class="section-eyebrow">CATEGORY</div>
+    <div class="section-title-row">
+      <h2 class="section-title" id="cat-h2">카테고리별로 찾아보기</h2>
+      <a href="category.html" class="see-all">전체 보기 →</a>
+    </div>
+  </div>
+  <div class="cat-grid">
+    <a href="calcs.html" class="cat-card">
+      <div class="cat-icon">🧮</div>
+      <div class="cat-name">무료 계산기</div>
+      <div class="cat-count">12가지 계산기</div>
+    </a>
+    <a href="category.html#purchase" class="cat-card">
+      <div class="cat-icon">🔑</div>
+      <div class="cat-name">구매 & 금융</div>
+      <div class="cat-count">신차·중고차·렌트·리스</div>
+    </a>
+    <a href="category.html#tax" class="cat-card">
+      <div class="cat-icon">📋</div>
+      <div class="cat-name">세금 & 비용</div>
+      <div class="cat-count">취등록세·자동차세</div>
+    </a>
+    <a href="category.html#ev" class="cat-card">
+      <div class="cat-icon">⚡</div>
+      <div class="cat-name">전기차 & 하이브리드</div>
+      <div class="cat-count">충전·보조금·비교</div>
+    </a>
+    <a href="category.html#maintain" class="cat-card">
+      <div class="cat-icon">🔧</div>
+      <div class="cat-name">유지관리 & 정비</div>
+      <div class="cat-count">엔진오일·타이어·DIY</div>
+    </a>
+    <a href="category.html#insurance" class="cat-card">
+      <div class="cat-icon">🛡️</div>
+      <div class="cat-name">보험 & 사고</div>
+      <div class="cat-count">보험료·사고처리</div>
+    </a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── 커뮤니티 인기 주제 ── -->
+<div class="community-section">
+  <div class="community-inner">
+    <div class="section-eyebrow">COMMUNITY PICKS</div>
+    <div class="section-title-row">
+      <h2 class="section-title">커뮤니티에서 화제가 된 글</h2>
+      <a href="category.html#community" class="see-all">더 보기 →</a>
+    </div>
+    <p style="font-size:13px;color:rgba(255,255,255,0.6);margin-top:6px;">보배드림·클리앙·Reddit r/cars·PistonHeads에서 반응이 가장 좋았던 주제들</p>
+    <div class="comm-grid">
+      <a href="guide-hybrid-vs-ev-2026.html" class="comm-card">
+        <div class="comm-source">클리앙 굴러간당 · 2026.06</div>
+        <div class="comm-title">하이브리드 vs 전기차 — 2026년 지금 뭘 사야 할까</div>
+        <div class="comm-desc">충전 인프라·보조금·실제 유지비 기준으로 커뮤니티가 내린 결론</div>
+        <span class="comm-badge">베스트 댓글 312개</span>
+      </a>
+      <a href="guide-lease-승계-tips.html" class="comm-card">
+        <div class="comm-source">보배드림 · 렌트·리스 게시판</div>
+        <div class="comm-title">리스 승계로 신차급 차 저렴하게 타는 법</div>
+        <div class="comm-desc">잔가 높게 설정된 리스 승계로 같은 차를 40% 저렴하게 타는 실전 방법</div>
+        <span class="comm-badge">조회 28만 · 추천 1,204</span>
+      </a>
+      <a href="guide-used-ev-battery-check.html" class="comm-card">
+        <div class="comm-source">Reddit r/electricvehicles</div>
+        <div class="comm-title">중고 전기차 배터리 상태 직접 확인하는 방법</div>
+        <div class="comm-desc">OBD 단말기로 SOH(배터리 건강도) 확인하는 DIY 가이드. 딜러에 속지 않는 법</div>
+        <span class="comm-badge">Upvote 4.2k</span>
+      </a>
+      <a href="guide-dealer-negotiation.html" class="comm-card">
+        <div class="comm-source">보배드림 · 국산차 게시판</div>
+        <div class="comm-title">신차 딜러 협상 — 최대 할인 받는 실전 스크립트</div>
+        <div class="comm-desc">월말·연말·재고차 타이밍 + 실제 써먹은 협상 대화 예시</div>
+        <span class="comm-badge">조회 41만 · 추천 892</span>
+      </a>
+      <a href="guide-tire-wear-pattern.html" class="comm-card">
+        <div class="comm-source">PistonHeads Community</div>
+        <div class="comm-title">타이어 마모 패턴으로 차량 상태 읽는 법</div>
+        <div class="comm-desc">안쪽·바깥쪽·중앙 마모 패턴마다 다른 원인과 해결 방법. 중고차 구매 전 필수 체크</div>
+        <span class="comm-badge">Community Pick</span>
+      </a>
+      <a href="guide-car-wash-paint-protect.html" class="comm-card">
+        <div class="comm-source">디시인사이드 자동차갤</div>
+        <div class="comm-title">셀프 세차 완전 정복 — 도장 보호 4단계</div>
+        <div class="comm-desc">세차기 vs 손세차 비용 비교 + 유막제거·코팅까지 단계별 실전 가이드</div>
+        <span class="comm-badge">힛갤 등극</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- 광고 3 -->
+<div class="ad-block" style="margin-top:0;">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4059494172804910" data-ad-slot="여기에_슬롯ID3" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<div class="divider" style="margin-top:0;"></div>
+
+<!-- ── 7. 자동차 오너 체크리스트 ── -->
+<div class="checklist-wrap">
+  <div class="checklist-box">
+    <h2>✅ 자동차 오너 정기 점검 체크리스트</h2>
+    <p>클릭하면 완료 표시됩니다. 브라우저를 닫아도 유지됩니다.</p>
+    <div class="checklist-grid" id="car-checklist">
+      <label class="check-item"><input type="checkbox" data-id="cc1"> 엔진오일 잔량·색깔 점검 (교환주기 확인)</label>
+      <label class="check-item"><input type="checkbox" data-id="cc2"> 타이어 마모도·공기압 점검</label>
+      <label class="check-item"><input type="checkbox" data-id="cc3"> 자동차 보험 만기일 확인</label>
+      <label class="check-item"><input type="checkbox" data-id="cc4"> 자동차세 연납 신청 (1월, 5% 할인)</label>
+      <label class="check-item"><input type="checkbox" data-id="cc5"> 차량 정기검사 일정 확인</label>
+      <label class="check-item"><input type="checkbox" data-id="cc6"> 에어필터·에어컨 필터 교체 시기 확인</label>
+      <label class="check-item"><input type="checkbox" data-id="cc7"> 브레이크 패드 잔량 점검</label>
+      <label class="check-item"><input type="checkbox" data-id="cc8"> 워셔액·냉각수 보충</label>
+      <label class="check-item"><input type="checkbox" data-id="cc9"> 블랙박스 메모리카드 포맷</label>
+      <label class="check-item"><input type="checkbox" data-id="cc10"> 전기차 배터리 SOH 확인 (OBD 앱)</label>
+      <label class="check-item"><input type="checkbox" data-id="cc11"> 렌트·리스 계약 만기일 확인</label>
+      <label class="check-item"><input type="checkbox" data-id="cc12"> 중고차 매도 시 감가상각 계산기로 적정가 확인</label>
+    </div>
+  </div>
+</div>
+
+<!-- 광고 4 (Footer 직전) -->
+<div class="ad-block">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4059494172804910" data-ad-slot="여기에_슬롯ID4" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<!-- ── 8. FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">CAR<span>百科</span></div>
+        <p class="footer-tagline">자동차의 모든 정보를 한곳에서.<br>커뮤니티 검증 정보와 무료 계산기를 제공합니다.</p>
+      </div>
+      <nav class="footer-nav" aria-label="푸터 네비게이션">
+        <a href="calcs.html">계산기 모음</a>
+        <a href="category.html">전체 가이드</a>
+        <a href="category.html#purchase">구매·금융</a>
+        <a href="category.html#ev">전기차</a>
+        <a href="category.html#maintain">유지관리</a>
+        <a href="category.html#insurance">보험·사고</a>
+        <a href="about.html">소개</a>
+        <a href="privacy.html">개인정보처리방침</a>
+        <a href="terms.html">이용약관</a>
+        <a href="contact.html">문의하기</a>
+      </nav>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <p style="color:rgba(255,255,255,0.3);">© 2026 카백과 (car-baekgwa). 본 사이트의 정보는 참고용이며 실제 세금·비용은 달라질 수 있습니다.</p>
+      <p style="color:rgba(255,255,255,0.3);">계산 결과는 예상값입니다. 정확한 금액은 딜러·세무서에서 확인하세요.</p>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="맨 위로">↑</button>
+
+<div id="sticky-cta">
+  <p>🧮 취등록세·자동차세가 궁금하다면?</p>
+  <a href="calcs.html">무료 계산기 12가지</a>
+  <button id="sticky-cta-close" aria-label="닫기">✕</button>
+</div>
+
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // 입력 요소 및 버튼 가져오기
-    const carPriceInput = document.getElementById('car-price');
-    const depositInput = document.getElementById('deposit');
-    const periodSelect = document.getElementById('period');
-    const calcBtn = document.getElementById('calc-btn');
-    const resultBox = document.getElementById('calc-result');
-
-    if (!calcBtn) return; // 계산기 요소가 없으면 실행 중지
-
-    calcBtn.addEventListener('click', function() {
-        // 1. 입력값 가져오기 및 예외 처리
-        const carPrice = parseFloat(carPriceInput.value) * 10000; // 만원 단위 반영
-        const depositPercent = parseFloat(depositInput.value) || 0;
-        const months = parseInt(periodSelect.value) || 36;
-
-        if (!carPrice || carPrice <= 0) {
-            alert('차량 가격을 정확히 입력해주세요.');
-            carPriceInput.focus();
-            return;
-        }
-
-        // 2. 자동차 금융 시뮬레이션 기본 로직 산출
-        // 취등록세 계산 (일반 승용차 기준 7%)
-        const acquisitionTax = carPrice * 0.07;
-        
-        // 초기 선수금/보증금 액수
-        const depositAmount = carPrice * (depositPercent / 100);
-        
-        // 대출/이용 원금 (차량가격 + 취등록세 - 선수금)
-        const principal = (carPrice + acquisitionTax) - depositAmount;
-        
-        // 추정 연 이자율 (렌트/리스/할부 평균 시중 금리 약 5.5% 반영)
-        const annualRate = 0.055;
-        const monthlyRate = annualRate / 12;
-        
-        // 원리금 균등상환 공식 적용하여 월 납입료 산출
-        // 공식: [원금 * 이율 * (1+이율)^기간] / [(1+이율)^기간 - 1]
-        const power = Math.pow(1 + monthlyRate, months);
-        let monthlyPayment = (principal * monthlyRate * power) / (power - 1);
-
-        // 3. 화면에 보기 좋게 결과 출력하기
-        resultBox.style.display = 'block';
-        resultBox.innerHTML = `
-            <div style="background: #161c2a; padding: 15px; border-radius: 8px; margin-top: 15px; border-left: 4px solid #38bdf8;">
-                <h4 style="margin-top:0; color:#38bdf8; font-size:16px;">📊 예상 견적 시뮬레이션 결과</h4>
-                <p style="margin: 5px 0; font-size:14px;">• 취등록세(7%): <b style="color:#fff;">${Math.round(acquisitionTax / 10000).toLocaleString()} 만원</b></p>
-                <p style="margin: 5px 0; font-size:14px;">• 초기 보증금/선수금: <b style="color:#fff;">${Math.round(depositAmount / 10000).toLocaleString()} 만원</b></p>
-                <hr style="border:0; border-top:1px solid #2e374a; margin:10px 0;">
-                <p style="margin: 5px 0; font-size:16px; font-weight:bold;">
-                    💡 예상 월 납입료: <span style="color:#f43f5e; font-size:18px;">약 ${Math.round(monthlyPayment / 10000).toLocaleString()} 만원</span>
-                </p>
-                <small style="color:#94a3b8; display:block; margin-top:10px; font-size:11px;">
-                    * 위 결과는 단순 시뮬레이션이며, 실제 렌트사/금융사 및 차종별 프로모션에 따라 다를 수 있습니다.
-                </small>
-            </div>
-        `;
+/* 진행바 */
+(function(){
+  var bar=document.getElementById('progress-bar');
+  window.addEventListener('scroll',function(){
+    var h=document.documentElement;
+    bar.style.width=Math.min(h.scrollTop/(h.scrollHeight-h.clientHeight)*100,100)+'%';
+  },{passive:true});
+})();
+/* 상단이동 */
+(function(){
+  var btn=document.getElementById('back-to-top');
+  window.addEventListener('scroll',function(){btn.classList.toggle('visible',window.scrollY>400);},{passive:true});
+  btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+})();
+/* 하단CTA */
+(function(){
+  var cta=document.getElementById('sticky-cta');
+  var closed=false;
+  window.addEventListener('scroll',function(){
+    if(closed)return;
+    cta.classList.toggle('visible',window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)>0.35);
+  },{passive:true});
+  document.getElementById('sticky-cta-close').addEventListener('click',function(){
+    cta.classList.remove('visible');closed=true;
+  });
+})();
+/* 체크리스트 */
+(function(){
+  document.querySelectorAll('#car-checklist input[type="checkbox"]').forEach(function(cb){
+    var id=cb.dataset.id;
+    if(localStorage.getItem('carck_'+id)==='1'){cb.checked=true;cb.closest('label').classList.add('done');}
+    cb.addEventListener('change',function(){
+      localStorage.setItem('carck_'+id,this.checked?'1':'0');
+      this.closest('label').classList.toggle('done',this.checked);
     });
-});
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // 1. 계산기 입력 폼을 담을 컨테이너를 사이드바 버튼 아래에 동적으로 생성하거나 활성화
-    const calcBtnTrigger = document.querySelector('.sidebar button, #calc-trigger-btn') || Array.from(document.querySelectorAll('button')).find(el => el.textContent.includes('모의 계산기'));
-    
-    // 만약 사이트 내에 입력창이 아직 없다면 버튼 바로 아래에 멋진 다크모드 입력창을 만들어 넣습니다.
-    if (calcBtnTrigger) {
-        // 버튼을 클릭하면 아래쪽에 숨겨져 있던 진짜 계산기 입력창이 펼쳐집니다.
-        calcBtnTrigger.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // 이미 입력창이 만들어져 있는지 확인
-            let container = document.getElementById('dynamic-calc-container');
-            if (!container) {
-                container = document.createElement('div');
-                container.id = 'dynamic-calc-container';
-                container.style.cssText = "background:#1e293b; padding:20px; border-radius:12px; margin-top:15px; border:1px solid #334155; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.3);";
-                
-                container.innerHTML = `
-                    <h4 style="margin:0 0 15px 0; color:#38bdf8; font-size:16px; font-weight:bold;">🧮 카백과 스마트 계산기</h4>
-                    <div style="margin-bottom:12px;">
-                        <label style="display:block; font-size:12px; color:#94a3b8; margin-bottom:5px;">차량 가격 (만원 단위)</label>
-                        <input type="number" id="car-price" value="4500" style="width:100%; padding:8px; background:#0f172a; border:1px solid #475569; border-radius:6px; color:#fff; box-sizing:border-box;">
-                    </div>
-                    <div style="margin-bottom:12px;">
-                        <label style="display:block; font-size:12px; color:#94a3b8; margin-bottom:5px;">선수금/보증금 (%)</label>
-                        <input type="number" id="deposit" value="20" placeholder="0~50" style="width:100%; padding:8px; background:#0f172a; border:1px solid #475569; border-radius:6px; color:#fff; box-sizing:border-box;">
-                    </div>
-                    <div style="margin-bottom:15px;">
-                        <label style="display:block; font-size:12px; color:#94a3b8; margin-bottom:5px;">이용 기간</label>
-                        <select id="period" style="width:100%; padding:8px; background:#0f172a; border:1px solid #475569; border-radius:6px; color:#fff; box-sizing:border-box;">
-                            <option value="36">36개월</option>
-                            <option value="48">48개월</option>
-                            <option value="60" selected>60개월</option>
-                        </select>
-                    </div>
-                    <button id="real-calc-btn" style="width:100%; padding:10px; background:#38bdf8; border:none; border-radius:6px; color:#0f172a; font-weight:bold; cursor:pointer; transition:all 0.2s;">실시간 견적 산출하기</button>
-                    <div id="calc-result" style="display:none; margin-top:15px;"></div>
-                `;
-                
-                calcBtnTrigger.parentNode.insertBefore(container, calcBtnTrigger.nextSibling);
-                
-                // 새로 만든 [실시간 견적 산출하기] 버튼에 계산 로직 연결
-                document.getElementById('real-calc-btn').addEventListener('click', calculateLogics);
-            } else {
-                // 이미 열려있으면 토글(닫기/열기)
-                container.style.display = container.style.display === 'none' ? 'block' : 'none';
-            }
-        });
-    }
-
-    // 2. 실제 자동차 금융 계산 수식 엔진
-    function calculateLogics() {
-        const carPriceInput = document.getElementById('car-price');
-        const depositInput = document.getElementById('deposit');
-        const periodSelect = document.getElementById('period');
-        const resultBox = document.getElementById('calc-result');
-
-        const carPrice = parseFloat(carPriceInput.value) * 10000; 
-        const depositPercent = parseFloat(depositInput.value) || 0;
-        const months = parseInt(periodSelect.value) || 60;
-
-        if (!carPrice || carPrice <= 0) {
-            alert('차량 가격을 정확히 입력해주세요.');
-            carPriceInput.focus();
-            return;
-        }
-
-        const acquisitionTax = carPrice * 0.07;
-        const depositAmount = carPrice * (depositPercent / 100);
-        const principal = (carPrice + acquisitionTax) - depositAmount;
-        
-        // 연이율 5.5% 적용
-        const annualRate = 0.055;
-        const monthlyRate = annualRate / 12;
-        const power = Math.pow(1 + monthlyRate, months);
-        let monthlyPayment = (principal * monthlyRate * power) / (power - 1);
-
-        resultBox.style.display = 'block';
-        resultBox.innerHTML = `
-            <div style="background: #0f172a; padding: 12px; border-radius: 8px; margin-top: 12px; border-left: 4px solid #f43f5e;">
-                <h5 style="margin:0 0 8px 0; color:#f43f5e; font-size:14px;">📊 분석 결과 (추정치)</h5>
-                <p style="margin:4px 0; font-size:13px; color:#94a3b8;">• 취등록세(7%): <span style="color:#fff;">${Math.round(acquisitionTax / 10000).toLocaleString()}만원</span></p>
-                <p style="margin:4px 0; font-size:13px; color:#94a3b8;">• 초기 보증금: <span style="color:#fff;">${Math.round(depositAmount / 10000).toLocaleString()}만원</span></p>
-                <div style="border-top:1px solid #334155; margin:8px 0;"></div>
-                <p style="margin:4px 0; font-size:14px; font-weight:bold; color:#fff;">
-                    💡 예상 월 납입료: <span style="color:#38bdf8;">약 ${Math.round(monthlyPayment / 10000).toLocaleString()}만원</span>
-                </p>
-            </div>
-        `;
-    }
-});
+  });
+})();
+/* 간단 검색 */
+(function(){
+  var pages=[
+    {url:'calc-acquisition-tax.html',title:'취등록세 계산기',cat:'계산기'},
+    {url:'calc-car-tax.html',title:'자동차세 계산기',cat:'계산기'},
+    {url:'calc-rent-lease.html',title:'장기렌트 vs 리스 비교 계산기',cat:'계산기'},
+    {url:'calc-fuel-cost.html',title:'연비·연료비 계산기',cat:'계산기'},
+    {url:'calc-ev-charge.html',title:'전기차 충전비 계산기',cat:'계산기'},
+    {url:'calc-depreciation.html',title:'감가상각 계산기',cat:'계산기'},
+    {url:'calc-tco.html',title:'총 소유비용(TCO) 계산기',cat:'계산기'},
+    {url:'calc-insurance.html',title:'보험료 예상 계산기',cat:'계산기'},
+    {url:'calc-hire-purchase.html',title:'할부 이자 계산기',cat:'계산기'},
+    {url:'calc-used-price.html',title:'중고차 적정가 계산기',cat:'계산기'},
+    {url:'calc-tire.html',title:'타이어 교체비 계산기',cat:'계산기'},
+    {url:'calc-mileage.html',title:'주행거리 비용 계산기',cat:'계산기'},
+    {url:'guide-rent-vs-lease-vs-buy.html',title:'장기렌트 vs 리스 vs 할부 완전 비교',cat:'구매·금융'},
+    {url:'guide-ev-vs-gasoline-real-cost.html',title:'전기차 vs 내연기관 실제 유지비 비교',cat:'전기차'},
+    {url:'guide-used-car-checklist.html',title:'중고차 사기 당하지 않는 법',cat:'중고차'},
+    {url:'guide-acquisition-tax-save.html',title:'취등록세 절약하는 5가지 방법',cat:'세금·금융'},
+    {url:'guide-car-insurance-lower.html',title:'자동차 보험료 낮추는 방법 10가지',cat:'보험'},
+    {url:'guide-engine-oil-diy.html',title:'엔진오일 직접 교환 vs 공임나라 비용 비교',cat:'유지관리'},
+    {url:'guide-hybrid-vs-ev-2026.html',title:'하이브리드 vs 전기차 2026년 비교',cat:'전기차'},
+    {url:'guide-dealer-negotiation.html',title:'신차 딜러 협상 실전 스크립트',cat:'구매·금융'},
+  ];
+  function search(q,dd){
+    if(!q||q.length<1){dd.classList.remove('active');return;}
+    var t=q.toLowerCase();
+    var r=pages.filter(function(p){return(p.title+p.cat).toLowerCase().includes(t);}).slice(0,6);
+    if(!r.length){dd.innerHTML='<div class="search-no-result">검색 결과가 없습니다.</div>';dd.classList.add('active');return;}
+    dd.innerHTML=r.map(function(p){
+      return '<a href="'+p.url+'" class="search-result-item"><div><div class="search-result-cat">'+p.cat+'</div><div class="search-result-title">'+p.title+'</div></div></a>';
+    }).join('');
+    dd.classList.add('active');
+  }
+  ['','mobile'].forEach(function(suffix){
+    var s=suffix?'search-input-'+suffix:'search-input';
+    var d=suffix?'search-dropdown-'+suffix:'search-dropdown';
+    var input=document.getElementById(s);
+    var dd=document.getElementById(d);
+    if(!input||!dd)return;
+    var t;
+    input.addEventListener('input',function(){clearTimeout(t);var q=input.value.trim();t=setTimeout(function(){search(q,dd);},150);});
+    input.addEventListener('keydown',function(e){if(e.key==='Enter'&&input.value.trim())window.location.href='category.html?q='+encodeURIComponent(input.value.trim());if(e.key==='Escape')dd.classList.remove('active');});
+    document.addEventListener('click',function(e){if(!input.contains(e.target)&&!dd.contains(e.target))dd.classList.remove('active');});
+  });
+})();
+</script>
 </body>
 </html>

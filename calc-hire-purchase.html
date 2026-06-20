@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="차량가격, 할부 기간, 금리를 입력하면 월 상환액과 총 이자를 원리금균등·원금균등 두 방식으로 계산합니다.">
+<meta name="keywords" content="자동차 할부 계산기, 할부 이자 계산, 차 할부 얼마, 원리금균등 계산, 자동차 금융">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="자동차 할부 이자 계산기 — 원리금균등·원금균등 월 상환액 자동계산">
+<meta property="og:description" content="차량가격, 할부 기간, 금리를 입력하면 월 상환액과 총 이자를 원리금균등·원금균등 두 방식으로 계산합니다.">
+<meta property="og:url" content="https://inti94.github.io/car-baekgwa/calc-hire-purchase.html">
+<meta property="og:image" content="https://inti94.github.io/car-baekgwa/og-image.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="카백과">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="자동차 할부 이자 계산기 — 원리금균등·원금균등 월 상환액 자동계산">
+<meta name="twitter:description" content="차량가격, 할부 기간, 금리를 입력하면 월 상환액과 총 이자를 원리금균등·원금균등 두 방식으로 계산합니다.">
+<meta name="twitter:image" content="https://inti94.github.io/car-baekgwa/og-image.png">
+<link rel="canonical" href="https://inti94.github.io/car-baekgwa/calc-hire-purchase.html">
+<title>자동차 할부 이자 계산기 — 원리금균등·원금균등 월 상환액 자동계산 | 카백과</title>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4059494172804910" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"자동차 할부 이자 계산기 — 원리금균등·원금균등 월 상환액 자동계산","url":"https://inti94.github.io/car-baekgwa/calc-hire-purchase.html","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"publisher":{"@type":"Organization","name":"카백과","url":"https://inti94.github.io/car-baekgwa/"},"dateModified":"2026-06-20","inLanguage":"ko-KR","breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://inti94.github.io/car-baekgwa/"},{"@type":"ListItem","position":2,"name":"계산기","item":"https://inti94.github.io/car-baekgwa/calcs.html"},{"@type":"ListItem","position":3,"name":"자동차 할부 이자 계산기 — 원리금균등·원금균등 월 상환액 자동계산","item":"https://inti94.github.io/car-baekgwa/calc-hire-purchase.html"}]}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+:root{--primary:#1E3A5F;--primary-light:#EBF2FA;--primary-mid:#16304F;--accent:#E8A020;--accent-light:#FEF3DC;--text:#1A1A1A;--text-muted:#6B7280;--text-light:#9CA3AF;--bg:#F8F9FA;--bg-card:#FFFFFF;--border:#E5E7EB;--border-light:#F3F4F6;--sans:'Noto Sans KR',sans-serif;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;word-break:keep-all;overflow-wrap:break-word;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.7;-webkit-text-size-adjust:100%;}
+nav{position:sticky;top:0;z-index:200;background:rgba(30,58,95,0.97);backdrop-filter:blur(10px);padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:58px;gap:12px;}
+.nav-logo{font-size:18px;font-weight:900;color:#fff;text-decoration:none;white-space:nowrap;flex-shrink:0;letter-spacing:-0.02em;}
+.nav-logo span{color:var(--accent);}
+.nav-links{display:flex;gap:1.5rem;list-style:none;flex-shrink:0;}
+.nav-links a{font-size:13px;color:rgba(255,255,255,0.75);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover{color:var(--accent);}
+.nav-cta{background:var(--accent);color:var(--text);font-size:13px;font-weight:700;padding:8px 16px;border-radius:6px;text-decoration:none;white-space:nowrap;min-height:36px;display:flex;align-items:center;}
+.mobile-search-bar{display:none;background:#16304F;padding:10px 1rem;position:sticky;top:58px;z-index:99;}
+.nav-search{position:relative;display:flex;align-items:center;width:100%;}
+.nav-search-input{width:100%;padding:10px 14px 10px 36px;border:1.5px solid rgba(255,255,255,0.2);border-radius:8px;background:rgba(255,255,255,0.1);font-size:16px;color:#fff;outline:none;font-family:var(--sans);-webkit-appearance:none;}
+.nav-search-input::placeholder{color:rgba(255,255,255,0.5);}
+.nav-search-icon{position:absolute;left:10px;font-size:14px;color:rgba(255,255,255,0.5);pointer-events:none;}
+.page-wrap{max-width:680px;margin:0 auto;padding:36px 1.5rem 100px;}
+.breadcrumb{display:flex;align-items:center;flex-wrap:wrap;gap:4px;font-size:12px;color:var(--text-muted);padding:12px 1.5rem;max-width:680px;margin:0 auto;}
+.breadcrumb a{color:var(--text-muted);text-decoration:none;}
+.breadcrumb a:hover{color:var(--primary);}
+.page-tag{display:inline-block;background:var(--primary-light);color:var(--primary);font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:14px;}
+.page-title{font-size:clamp(22px,4vw,30px);font-weight:900;line-height:1.3;margin-bottom:8px;letter-spacing:-0.02em;}
+.page-desc{font-size:14px;color:var(--text-muted);margin-bottom:28px;line-height:1.6;}
+.calc-card{background:var(--bg-card);border:1.5px solid var(--border);border-radius:16px;padding:26px;margin-bottom:18px;}
+.card-label{font-size:11px;font-weight:700;color:var(--text-muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px;}
+.field{margin-bottom:16px;}
+.field label{display:block;font-size:13px;font-weight:600;margin-bottom:5px;color:var(--text);}
+.field-hint{font-size:11px;color:var(--text-muted);margin-bottom:5px;line-height:1.5;}
+.field input,.field select{width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:16px;font-family:var(--sans);color:var(--text);background:var(--bg-card);outline:none;transition:border-color .2s;-webkit-appearance:none;appearance:none;}
+.field input:focus,.field select:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(30,58,95,0.1);}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.toggle-group{display:flex;gap:8px;flex-wrap:wrap;}
+.toggle-btn{padding:9px 16px;border:1.5px solid var(--border);border-radius:20px;background:var(--bg-card);font-size:13px;cursor:pointer;transition:all .15s;color:var(--text-muted);font-family:var(--sans);min-height:44px;display:flex;align-items:center;}
+.toggle-btn.active{border-color:var(--primary);background:var(--primary-light);color:var(--primary);font-weight:700;}
+.btn-calc{width:100%;padding:15px;background:var(--primary);color:#fff;border:none;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer;font-family:var(--sans);transition:background .2s;margin-top:8px;min-height:52px;}
+.btn-calc:hover{background:var(--primary-mid);}
+.result-card{background:var(--primary);border-radius:16px;padding:26px;color:#fff;margin-bottom:18px;}
+.result-label{font-size:13px;opacity:.8;margin-bottom:5px;}
+.result-total{font-size:clamp(26px,5vw,36px);font-weight:700;margin-bottom:4px;line-height:1.2;}
+.result-sub{font-size:12px;opacity:.75;line-height:1.5;}
+.breakdown{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:18px;margin-bottom:16px;overflow-x:auto;}
+.br-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--border-light);font-size:13px;gap:12px;}
+.br-row:last-child{border:none;font-weight:700;font-size:15px;padding-top:12px;margin-top:4px;border-top:1.5px solid var(--border);}
+.br-label{color:var(--text-muted);flex:1;line-height:1.4;}
+.br-val{font-weight:500;white-space:nowrap;flex-shrink:0;}
+.br-val.hi{color:var(--primary);}
+.br-val.red{color:#DC2626;}
+.notice-box{background:var(--primary-light);border-radius:12px;padding:15px 17px;font-size:12px;color:#1E3A5F;line-height:1.7;margin-top:14px;}
+.notice-box strong{color:var(--primary);}
+.rel-calcs{margin-top:28px;}
+.rel-calcs h2,.rel-articles h2{font-size:16px;font-weight:700;color:var(--text);margin-bottom:12px;display:flex;align-items:center;gap:7px;}
+.rel-calc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:10px;}
+.rel-calc-card{display:flex;align-items:center;gap:10px;padding:13px;background:var(--bg-card);border:1.5px solid var(--border);border-radius:12px;text-decoration:none;color:var(--text);transition:all .2s;}
+.rel-calc-card:hover{border-color:var(--primary);transform:translateY(-2px);}
+.rcc-icon{font-size:20px;flex-shrink:0;}
+.rcc-title{font-size:12px;font-weight:700;line-height:1.3;}
+.rcc-desc{font-size:10px;color:var(--text-muted);margin-top:2px;}
+.rel-articles{margin-top:22px;}
+.rel-art-list{display:flex;flex-direction:column;}
+.rel-art-item{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--border-light);text-decoration:none;color:var(--text);transition:color .2s;}
+.rel-art-item:last-child{border-bottom:none;}
+.rel-art-item:hover .rat-title{color:var(--primary);}
+.rat-num{font-size:16px;font-weight:900;color:var(--border);width:22px;flex-shrink:0;text-align:center;}
+.rat-cat{font-size:10px;color:var(--primary);font-weight:700;margin-bottom:2px;}
+.rat-title{font-size:13px;font-weight:600;line-height:1.4;}
+.rat-arrow{color:var(--primary);font-size:13px;flex-shrink:0;}
+.inline-calc-box{background:linear-gradient(135deg,var(--primary-light),#fff);border:2px solid var(--primary);border-radius:14px;padding:22px;margin:24px 0;}
+.inline-calc-box h3{font-size:14px;font-weight:700;color:var(--text);margin-bottom:14px;}
+.inline-fields{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:12px;}
+.inline-field label{display:block;font-size:11px;font-weight:600;color:var(--text-muted);margin-bottom:4px;}
+.inline-field input{width:100%;padding:9px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:15px;font-family:var(--sans);color:var(--text);background:#fff;outline:none;transition:border-color .2s;-webkit-appearance:none;}
+.inline-field input:focus{border-color:var(--primary);}
+.inline-calc-btn{width:100%;padding:11px;background:var(--primary);color:#fff;border:none;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;font-family:var(--sans);min-height:44px;}
+.inline-calc-btn:hover{background:var(--primary-mid);}
+.inline-result{margin-top:12px;padding:14px 15px;background:#fff;border-radius:10px;border:1px solid var(--border);display:none;}
+.inline-result-val{font-size:20px;font-weight:700;color:var(--primary);margin-bottom:4px;}
+.inline-result-sub{font-size:11px;color:var(--text-muted);line-height:1.5;}
+.inline-full-link{display:block;text-align:center;margin-top:11px;font-size:12px;color:var(--primary);text-decoration:none;font-weight:600;}
+#progress-bar{position:fixed;top:0;left:0;height:3px;width:0%;background:var(--accent);z-index:9999;transition:width 0.1s;}
+#back-to-top{position:fixed;bottom:80px;right:16px;width:44px;height:44px;background:var(--primary);color:#fff;border:none;border-radius:50%;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(30,58,95,0.35);opacity:0;pointer-events:none;transition:opacity 0.3s;z-index:500;}
+#back-to-top.visible{opacity:1;pointer-events:auto;}
+#sticky-cta{position:fixed;bottom:0;left:0;right:0;background:var(--primary);color:#fff;padding:12px 1.5rem;display:flex;align-items:center;justify-content:center;gap:14px;z-index:800;transform:translateY(110%);transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);box-shadow:0 -4px 24px rgba(0,0,0,0.2);}
+#sticky-cta.visible{transform:translateY(0);}
+#sticky-cta p{font-size:13px;color:rgba(255,255,255,0.85);margin:0;white-space:nowrap;}
+#sticky-cta a{background:var(--accent);color:var(--text);font-size:13px;font-weight:700;padding:9px 18px;border-radius:8px;text-decoration:none;flex-shrink:0;min-height:36px;display:flex;align-items:center;}
+#sticky-cta-close{background:none;border:none;color:rgba(255,255,255,0.5);font-size:20px;cursor:pointer;padding:4px;line-height:1;}
+footer{background:#0A1628;color:rgba(255,255,255,0.5);padding:32px 1.5rem 20px;}
+.footer-inner{max-width:680px;margin:0 auto;}
+.footer-links{display:flex;flex-wrap:wrap;gap:12px 20px;margin-bottom:16px;}
+.footer-links a{font-size:12px;color:rgba(255,255,255,0.5);text-decoration:none;}
+.footer-links a:hover{color:var(--accent);}
+.footer-copy{font-size:11px;color:rgba(255,255,255,0.3);line-height:1.6;}
+@media(max-width:768px){nav .nav-links{display:none;}.mobile-search-bar{display:block;}}
+@media(max-width:640px){.page-wrap{padding:20px 1rem 100px;}.field-row{grid-template-columns:1fr;}.rel-calc-grid{grid-template-columns:1fr 1fr;}.inline-fields{grid-template-columns:1fr 1fr;}.toggle-group{flex-direction:column;gap:6px;}.toggle-btn{border-radius:10px;justify-content:center;}}
+</style>
+</head>
+<body>
+<div id="progress-bar"></div>
+<nav>
+  <a href="index.html" class="nav-logo">CAR<span>百科</span></a>
+  <ul class="nav-links">
+    <li><a href="calcs.html">🧮 계산기</a></li>
+    <li><a href="category.html#purchase">구매·금융</a></li>
+    <li><a href="category.html#ev">전기차</a></li>
+    <li><a href="index.html">홈</a></li>
+  </ul>
+  <a href="calcs.html" class="nav-cta">계산기 전체</a>
+</nav>
+<div class="mobile-search-bar">
+  <div class="nav-search">
+    <span class="nav-search-icon">🔍</span>
+    <input type="text" class="nav-search-input" placeholder="계산기·자동차 정보 검색..." autocomplete="off">
+  </div>
+</div>
+<nav class="breadcrumb" aria-label="breadcrumb">
+  <a href="index.html">홈</a><span>›</span>
+  <a href="calcs.html">계산기</a><span>›</span>
+  <span>자동차 할부 이자 계산기 — 원리금균등·원금균등 월 상환액 자동계산</span>
+</nav>
+<div class="page-wrap">
+  <span class="page-tag">🏦 할부 계산기</span>
+  <h1 class="page-title">자동차 할부 이자 계산기 — 원리금균등·원금균등 월 상환액 자동계산</h1>
+  <p class="page-desc">차량가격, 할부 기간, 금리를 입력하면 월 상환액과 총 이자를 원리금균등·원금균등 두 방식으로 계산합니다.</p>
+  
+<div class="calc-card">
+  <div class="card-label">정보 입력</div>
+  
+  <button class="btn-calc" onclick="calcMain()">계산하기</button>
+</div>
+<div id="main-result" style="display:none;">
+  <div class="result-card">
+    <div class="result-label">계산 결과</div>
+    <div class="result-total" id="res-val">-</div>
+    <div class="result-sub" id="res-sub"></div>
+  </div>
+  <div class="breakdown" id="res-detail"></div>
+  <div class="notice-box">본 계산기의 결과는 참고용 추정값입니다. 정확한 금액은 딜러·보험사·세무서에서 확인하세요.</div>
+</div>
+<div class="rel-calcs"><h2>🔗 함께 사용한 계산기</h2><div class="rel-calc-grid"><a href="calc-rent-lease.html" class="rel-calc-card"><span class="rcc-icon">🔑</span><div><div class="rcc-title">렌트 vs 리스 비교</div><div class="rcc-desc">할부 vs 렌트 비교</div></div></a><a href="calc-acquisition-tax.html" class="rel-calc-card"><span class="rcc-icon">📋</span><div><div class="rcc-title">취등록세 계산기</div><div class="rcc-desc">구매 시 전체 비용</div></div></a><a href="calc-tco.html" class="rel-calc-card"><span class="rcc-icon">💰</span><div><div class="rcc-title">총 소유비용 계산기</div><div class="rcc-desc">5년 실제 비용</div></div></a></div></div>
+<div class="rel-articles" style="margin-top:22px;"><h2>📰 함께 많이 본 글</h2><div class="rel-art-list"><a href="guide-rent-vs-lease-vs-buy.html" class="rel-art-item"><span class="rat-num">1</span><div><div class="rat-cat">구매·금융</div><div class="rat-title">할부 vs 렌트 vs 리스 완전 비교</div></div><span class="rat-arrow">→</span></a><a href="guide-dealer-negotiation.html" class="rel-art-item"><span class="rat-num">2</span><div><div class="rat-cat">구매·금융</div><div class="rat-title">자동차 할부 금리 낮추는 협상법</div></div><span class="rat-arrow">→</span></a><a href="guide-acquisition-tax-save.html" class="rel-art-item"><span class="rat-num">3</span><div><div class="rat-cat">세금·금융</div><div class="rat-title">할부 구매 시 취등록세 절약법</div></div><span class="rat-arrow">→</span></a><a href="guide-used-car-checklist.html" class="rel-art-item"><span class="rat-num">4</span><div><div class="rat-cat">중고차</div><div class="rat-title">중고차 할부 시 주의사항</div></div><span class="rat-arrow">→</span></a><a href="guide-ev-vs-gasoline-real-cost.html" class="rel-art-item"><span class="rat-num">5</span><div><div class="rat-cat">전기차</div><div class="rat-title">전기차 할부 vs 내연기관 할부 비교</div></div><span class="rat-arrow">→</span></a></div></div>
+</div>
+<button id="back-to-top" aria-label="맨 위로">↑</button>
+<div id="sticky-cta">
+  <p>🧮 자동차 관련 계산기가 더 있습니다</p>
+  <a href="calcs.html">전체 계산기 보기</a>
+  <button id="sticky-cta-close">✕</button>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="index.html">홈</a>
+      <a href="calcs.html">계산기 모음</a>
+      <a href="category.html">전체 가이드</a>
+      <a href="about.html">소개</a>
+      <a href="privacy.html">개인정보처리방침</a>
+    </div>
+    <p class="footer-copy">© 2026 카백과. 본 계산기는 참고용이며 실제 세금·비용은 달라질 수 있습니다.</p>
+  </div>
+</footer>
+<script>
+
+(function(){
+  var bar=document.getElementById('progress-bar');
+  if(bar)window.addEventListener('scroll',function(){var h=document.documentElement;bar.style.width=Math.min(h.scrollTop/(h.scrollHeight-h.clientHeight)*100,100)+'%';},{passive:true});
+  var btn=document.getElementById('back-to-top');
+  if(btn){window.addEventListener('scroll',function(){btn.classList.toggle('visible',window.scrollY>400);},{passive:true});btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});}
+  var cta=document.getElementById('sticky-cta');
+  if(cta){var closed=false;window.addEventListener('scroll',function(){if(closed)return;cta.classList.toggle('visible',window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)>0.35);},{passive:true});var cl=document.getElementById('sticky-cta-close');if(cl)cl.addEventListener('click',function(){cta.classList.remove('visible');closed=true;});}
+})();
+
+
+function fmt(n){return Math.round(n).toLocaleString('ko-KR')+'원';}
+function calcMain(){
+  var price=parseFloat(document.getElementById('f0').value)*10000||0;
+  var dep=parseFloat(document.getElementById('f1').value)*10000||0;
+  var rate=parseFloat(document.getElementById('f2').value)/100/12;
+  var term=parseInt(document.getElementById('f3').value)||48;
+  var principal=price-dep;
+  var pow=Math.pow(1+rate,term);
+  var equalPayment=rate===0?principal/term:principal*rate*pow/(pow-1);
+  var totalInterest=equalPayment*term-principal;
+  var firstPrincipal=principal/term;
+  var firstPayment=firstPrincipal+principal*rate;
+  document.getElementById('res-val').textContent=fmt(equalPayment);
+  document.getElementById('res-sub').textContent='원리금균등 월 납입액 / 총 이자 '+fmt(totalInterest);
+  document.getElementById('res-detail').innerHTML='<div class="br-row"><span class="br-label">대출 원금</span><span class="br-val">'+fmt(principal)+'</span></div><div class="br-row"><span class="br-label">원리금균등 월납입</span><span class="br-val hi">'+fmt(equalPayment)+'</span></div><div class="br-row"><span class="br-label">원금균등 첫달 납입</span><span class="br-val">'+fmt(firstPayment)+'</span></div><div class="br-row"><span class="br-label">원리금균등 총 이자</span><span class="br-val red">'+fmt(totalInterest)+'</span></div><div class="br-row"><span class="br-label">총 상환액</span><span class="br-val">'+fmt(equalPayment*term)+'</span></div>';
+  document.getElementById('main-result').style.display='block';
+  document.getElementById('main-result').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+</script>
+</body>
+</html>
