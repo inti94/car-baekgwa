@@ -224,7 +224,7 @@ function calcMain(){
   var currentVal=price*ageFactor*kmFactor;
   var annualDeprec=(price-currentVal)/Math.max(age,1);
   document.getElementById('res-val').textContent=fmt(currentVal);
-  document.getElementById('res-sub').textContent='구매가 '+fmt(price)+' → 현재 추정가 '+fmt(currentVal)+' ('+Math.round((1-currentVal/price)*100)+'% 감가)';
+  document.getElementById('res-sub').textContent='구매가 '+fmt(price)+' → 현재 추정가 '+fmt(currentVal)+' ('+(price>0?Math.round((1-currentVal/price)*100):0)+'% 감가)';
   document.getElementById('res-detail').innerHTML='<div class="br-row"><span class="br-label">구매가</span><span class="br-val">'+fmt(price)+'</span></div><div class="br-row"><span class="br-label">차령 ('+age+'년) 반영</span><span class="br-val">×'+ageFactor.toFixed(2)+'</span></div><div class="br-row"><span class="br-label">주행거리 반영</span><span class="br-val">×'+kmFactor.toFixed(2)+'</span></div><div class="br-row"><span class="br-label">연간 감가액</span><span class="br-val red">-'+fmt(annualDeprec)+'</span></div><div class="br-row"><span class="br-label">현재 예상 가치</span><span class="br-val hi">'+fmt(currentVal)+'</span></div>';
   document.getElementById('main-result').style.display='block';
   document.getElementById('main-result').scrollIntoView({behavior:'smooth',block:'start'});

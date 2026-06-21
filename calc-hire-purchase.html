@@ -231,7 +231,7 @@ function fmt(n){return Math.round(n).toLocaleString('ko-KR')+'원';}
 function calcMain(){
   var price=parseFloat(document.getElementById('f0').value)*10000||0;
   var dep=parseFloat(document.getElementById('f1').value)*10000||0;
-  var rate=parseFloat(document.getElementById('f2').value)/100/12;
+  var rate=(parseFloat(document.getElementById('f2').value)||0)/100/12;
   var term=parseInt(document.getElementById('f3').value)||48;
   var principal=price-dep;
   var pow=Math.pow(1+rate,term);
