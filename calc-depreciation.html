@@ -155,7 +155,21 @@ footer{background:#0A1628;color:rgba(255,255,255,0.5);padding:32px 1.5rem 20px;}
 <div class="calc-card">
   <div class="card-label">정보 입력</div>
   
-  <button class="btn-calc" onclick="calcMain()">계산하기</button>
+  <div class="field">
+    <label>구매가 (만원)</label>
+    <input type="number" id="f0" value="4000" step="100" inputmode="numeric">
+  </div>
+  <div class="field-row">
+    <div class="field">
+      <label>연식 (출고 연도)</label>
+      <input type="number" id="f1" value="2022" step="1" inputmode="numeric">
+    </div>
+    <div class="field">
+      <label>주행거리 (km)</label>
+      <input type="number" id="f2" value="60000" step="5000" inputmode="numeric">
+    </div>
+  </div>
+  <button class="btn-calc" onclick="calcMain()">📉 현재 차량 가치 계산하기</button>
 </div>
 <div id="main-result" style="display:none;">
   <div class="result-card">

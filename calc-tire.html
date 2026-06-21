@@ -155,7 +155,32 @@ footer{background:#0A1628;color:rgba(255,255,255,0.5);padding:32px 1.5rem 20px;}
 <div class="calc-card">
   <div class="card-label">정보 입력</div>
   
-  <button class="btn-calc" onclick="calcMain()">계산하기</button>
+  <div class="field">
+    <label>타이어 규격</label>
+    <select id="f0">
+      <option value="0">205/55R16 (준중형)</option>
+      <option value="1" selected>225/45R17 (중형)</option>
+      <option value="2">235/45R18 (중형·SUV)</option>
+      <option value="3">255/40R19 (대형·SUV)</option>
+      <option value="4">275/35R20 (대형·고성능)</option>
+    </select>
+  </div>
+  <div class="field">
+    <label>브랜드 등급</label>
+    <select id="f1">
+      <option value="0">보급형 (국산 저가)</option>
+      <option value="1" selected>중급형 (국산·수입 보급)</option>
+      <option value="2">프리미엄 (수입 고급)</option>
+    </select>
+  </div>
+  <div class="field">
+    <label>교체 수량</label>
+    <select id="f2">
+      <option value="2">2개 (앞 또는 뒤)</option>
+      <option value="4" selected>4개 (전체)</option>
+    </select>
+  </div>
+  <button class="btn-calc" onclick="calcMain()">🔧 타이어 교체비 계산하기</button>
 </div>
 <div id="main-result" style="display:none;">
   <div class="result-card">
@@ -203,7 +228,7 @@ function fmt(n){return Math.round(n).toLocaleString('ko-KR')+'원';}
 function calcMain(){
   var sizeOpts=[['205/55R16',80000,110000,160000],['225/45R17',90000,130000,190000],['235/45R18',100000,150000,220000],['255/40R19',120000,180000,260000],['275/35R20',140000,210000,300000]];
   var sizeIdx=Math.min(parseInt(document.getElementById('f0').value)||0,sizeOpts.length-1);
-  var brand=Math.min(parseInt(document.getElementById('f1').value)||1,2);
+  var _b=parseInt(document.getElementById('f1').value);var brand=Math.min(isNaN(_b)?1:_b,2);
   var qty=parseInt(document.getElementById('f2').value)||4;
   var sizeInfo=sizeOpts[sizeIdx];
   var tirePrice=sizeInfo[brand+1];
